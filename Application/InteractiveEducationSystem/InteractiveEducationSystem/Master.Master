@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="InteractiveEducationSystem.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <!--Header-->        
+ 
+        <div class="row">
+
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                            <i class="material-icons">menu
+                            </i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Mobile Side Nav-->
+            <ul class="sidenav" id="mobile-demo">
+                <li class="logo" style="margin-left: -18px; margin-right: -30px;">
+                    <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
+                </li>
+                <li><a href="#!">Home</a></li>
+                <li><a href="#!">Courses</a></li>
+                <li><a href="#!">Tech Support</a></li>
+            </ul>
+
+        </div>
+        
+        
+
+        <div class="row">
+
+            <!--Side Nav Fixed-->
+            
+            <blockquote class="col l2 center card-title">
+                <ul>
+                    <li><a href="#!">Home</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Courses</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Tech Support</a></li>
+                </ul>
+            </blockquote>
+            
+            <div class="col l10">
+                <!--Body-->
+
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="row">
+
+            <!--Footer-->
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Footer Content</h5>
+                            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>        
+
+    </form>
+
+    <!-- Compiled and minified JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+          });
+    </script>
+
+</html>
