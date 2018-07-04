@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
+    <Content Include="FrontEnd\Professor\ProfessorHome.aspx" />
     <Content Include="FrontEnd\Student\StudentHome.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="js\materialize.js" />
@@ -77,6 +78,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrontEnd\Professor\ProfessorHome.aspx.cs">
+      <DependentUpon>ProfessorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorHome.aspx.designer.cs">
+      <DependentUpon>ProfessorHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorMaster.Master.cs">
+      <DependentUpon>ProfessorMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorMaster.Master.designer.cs">
+      <DependentUpon>ProfessorMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Student\StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +125,7 @@
   <ItemGroup>
     <Content Include="Master.Master" />
     <Content Include="FrontEnd\Student\StudentMaster.Master" />
+    <Content Include="FrontEnd\Professor\ProfessorMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
