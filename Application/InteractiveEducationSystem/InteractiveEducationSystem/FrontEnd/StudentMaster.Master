@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="InteractiveEducationSystem.Master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="InteractiveEducationSystem.FrontEnd.StudentMaster" %>
 
 <!DOCTYPE html>
 
@@ -19,10 +19,8 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
 </head>
 <body>
-
     <form id="form1" runat="server">
 
         <!--Header-->        
@@ -127,5 +125,4 @@
             $('.sidenav').sidenav();
           });
     </script>
-
 </html>
