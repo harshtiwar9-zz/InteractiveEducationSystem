@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="brand-logo center-align">
-        <h1>asp:quer</h1>
+        <h1>Course List</h1>
     </div>
     <div class="row container">
         <div class="col l8 s12 m12 offset-l4">
