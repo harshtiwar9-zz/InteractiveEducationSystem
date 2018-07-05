@@ -67,6 +67,8 @@
   <ItemGroup>
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
+    <Content Include="FrontEnd\Professor\CourseQuiz.aspx" />
+    <Content Include="FrontEnd\Professor\ProfessorCourses.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorHome.aspx" />
     <Content Include="FrontEnd\Student\StudentHome.aspx" />
     <Content Include="Home.aspx" />
@@ -75,6 +77,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrontEnd\Professor\CourseQuiz.aspx.cs">
+      <DependentUpon>CourseQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\CourseQuiz.aspx.designer.cs">
+      <DependentUpon>CourseQuiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorCourses.aspx.cs">
+      <DependentUpon>ProfessorCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorCourses.aspx.designer.cs">
+      <DependentUpon>ProfessorCourses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Professor\ProfessorHome.aspx.cs">
       <DependentUpon>ProfessorHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
