@@ -15,6 +15,10 @@
                     <a href="#!" class="collection-item active">Course 2</a>
                     <a href="#!" class="collection-item">Course 3</a>
                     <a href="#!" class="collection-item">Course 4</a>
+
+                    <asp:Button ID="stu_answer" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click" />
+
+
                 </div>
             </div>
         </div>
