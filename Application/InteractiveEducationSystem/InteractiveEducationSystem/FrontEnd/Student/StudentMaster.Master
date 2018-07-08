@@ -44,7 +44,7 @@
                 <li class="logo" style="margin-left: -18px; margin-right: -30px;">
                     <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
                 </li>
-                <li><a href="#!">Home</a></li>
+                <li><a href="../../Home.aspx</a>">Home</a></li>
                 <li><a href="#!">Courses</a></li>
                 <li><a href="#!">Tech Support</a></li>
             </ul>
