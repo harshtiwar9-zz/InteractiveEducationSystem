@@ -16,12 +16,34 @@
                     <a href="#!" class="collection-item">Course 3</a>
                     <a href="#!" class="collection-item">Course 4</a>
 
-                    <asp:Button ID="stu_answer" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click" />
-
-
                 </div>
             </div>
+            
         </div>
+        
+    <asp:Label ID="Quiz_idlbl" runat="server" Text="Enter Quiz_id to search"></asp:Label>
+    <asp:TextBox ID="QuizIdTxt" runat="server" TextMode="Number"></asp:TextBox><br/>
+    <asp:Label ID="Student_idlbl" runat="server" Text="Enter Student_id to search with"></asp:Label>
+    <asp:TextBox ID="stuIdTxt" runat="server" TextMode="Number"></asp:TextBox>
+    <br/>
+    <asp:Button ID="stu_answer" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click"/>      <br/>
+    <asp:Label ID="datafound" runat="server" Text=" Following DATA is retreived !!" ForeColor="Green"></asp:Label>    
+
+         <asp:GridView ID="Grid_answers" runat="server" AutoGenerateColumns="False"  AllowPaging="True" AllowSorting="True" >
+             <Columns>
+                 <asp:BoundField DataField="User_id_FK" HeaderText="User_id_FK" SortExpression="User_id_FK" />
+                 <asp:BoundField DataField="Quiz_id_FK" HeaderText="Quiz_id_FK" SortExpression="Quiz_id_FK" />
+                 <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
+             </Columns>
+        
+
+    </asp:GridView>
+        
+        <asp:Label ID="no_datalbl" runat="server" Text=" No data found !!" ForeColor="Red"></asp:Label>
+        
     </div>
+
+
+
 
 </asp:Content>

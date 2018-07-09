@@ -13,6 +13,42 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
     public partial class ProfessorCourses {
         
         /// <summary>
+        /// Quiz_idlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Quiz_idlbl;
+        
+        /// <summary>
+        /// QuizIdTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox QuizIdTxt;
+        
+        /// <summary>
+        /// Student_idlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Student_idlbl;
+        
+        /// <summary>
+        /// stuIdTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox stuIdTxt;
+        
+        /// <summary>
         /// stu_answer control.
         /// </summary>
         /// <remarks>
@@ -20,5 +56,32 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button stu_answer;
+        
+        /// <summary>
+        /// datafound control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label datafound;
+        
+        /// <summary>
+        /// Grid_answers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Grid_answers;
+        
+        /// <summary>
+        /// no_datalbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label no_datalbl;
     }
 }
