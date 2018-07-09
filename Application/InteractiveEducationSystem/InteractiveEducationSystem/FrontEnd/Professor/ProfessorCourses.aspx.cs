@@ -13,5 +13,10 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
         {
 
         }
+
+        protected void stu_answer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

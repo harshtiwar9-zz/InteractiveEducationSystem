@@ -7,8 +7,8 @@
         <h1>Course 1</h1>
     </div>
     <div class="row ">
-        <div class="col l8 s12 m12 offset-l1">
-            <div class="row hoverable white-text">
+        <div class="col l5 s12 m12 offset-l3">
+            <div class="row white-text">
 
                 <ul class="collapsible collection">
                     <li>

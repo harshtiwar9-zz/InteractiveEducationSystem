@@ -8,15 +8,18 @@
     </div>
     <div class="row container">
         <div class="col l8 s12 m12 offset-l4">
-            <div class="row card-panel red-text">
-                
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-                    <Columns>
-                        <asp:BoundField DataField="Course_name" HeaderText="Course_name" SortExpression="Course_name" />
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Interactivestring %>" SelectCommand="SELECT [Course_name] FROM [Course_list]"></asp:SqlDataSource>
-                
+            <div class="row card-panel hoverable white-text">
+                <div class="collection">
+                    
+                    <a href="CourseQuiz.aspx?Course={0}" class="collection-item">Course 1</a>
+                    <a href="#!" class="collection-item active">Course 2</a>
+                    <a href="#!" class="collection-item">Course 3</a>
+                    <a href="#!" class="collection-item">Course 4</a>
+
+                    <asp:Button ID="stu_answer" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click" />
+
+
+                </div>
             </div>
         </div>
     </div>
