@@ -78,7 +78,7 @@
                     <li class="divider"></li>
                     <li><a href="StudentList.aspx">Student List</a></li>
                     <li class="divider"></li>
-                    <li><a href="CourseList.aspx">Course List</a></li>
+                    <li class=""><a href="CourseList.aspx">Course List</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Tech Support</a></li>
                 </ul>

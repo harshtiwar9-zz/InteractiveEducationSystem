@@ -16,6 +16,8 @@
                     <a href="#!" class="collection-item">Course 3</a>
                     <a href="#!" class="collection-item">Course 4</a>
 
+
+
                 </div>
             </div>
             
