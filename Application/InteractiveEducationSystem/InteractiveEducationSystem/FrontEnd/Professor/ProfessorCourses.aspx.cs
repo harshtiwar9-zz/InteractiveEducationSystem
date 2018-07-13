@@ -18,5 +18,10 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
         {
 
         }
+
+        protected void quiz_man_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CourseQuiz.aspx");
+        }
     }
 }
