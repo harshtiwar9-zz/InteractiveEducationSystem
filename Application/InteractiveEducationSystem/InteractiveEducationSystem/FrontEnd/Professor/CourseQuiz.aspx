@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="brand-logo center-align">
-        <h1>Course 1</h1>
+        <h1>Quiz Management</h1>
     </div>
     <div class="row ">
         <div class="col l5 s12 m12 offset-l3">
@@ -12,10 +12,11 @@
 
                 <ul class="collapsible collection">
                     <li>
-                        <a href="#!" class="collection-item collapsible-header">
+                        <a href="AddQuiz.aspx" class="collection-item collapsible-header">
                             Add Quiz
                         </a>
                     </li>
+        
                     <li>
                         <a href="#!" class="collection-item collapsible-header">
                             Edit Quiz
@@ -24,7 +25,8 @@
 
                             <select>
                                 <option value="" disabled selected>Select Quiz to Edit</option>
-                                <option value="1">Option 1</option>
+                                
+                            <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
                                 <option value="1">Option 1</option>
