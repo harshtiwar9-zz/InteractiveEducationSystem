@@ -67,10 +67,11 @@
   <ItemGroup>
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
-    <Content Include="FrontEnd\Professor\AddQuiz.aspx" />
+    <Content Include="FrontEnd\Professor\CourseList.aspx" />
     <Content Include="FrontEnd\Professor\CourseQuiz.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorCourses.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorHome.aspx" />
+    <Content Include="FrontEnd\Professor\StudentList.aspx" />
     <Content Include="FrontEnd\Student\StudentHome.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="js\materialize.js" />
@@ -78,12 +79,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrontEnd\Professor\AddQuiz.aspx.cs">
-      <DependentUpon>AddQuiz.aspx</DependentUpon>
+    <Compile Include="FrontEnd\Professor\CourseList.aspx.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FrontEnd\Professor\AddQuiz.aspx.designer.cs">
-      <DependentUpon>AddQuiz.aspx</DependentUpon>
+    <Compile Include="FrontEnd\Professor\CourseList.aspx.designer.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Professor\CourseQuiz.aspx.cs">
       <DependentUpon>CourseQuiz.aspx</DependentUpon>
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="FrontEnd\Professor\ProfessorMaster.Master.designer.cs">
       <DependentUpon>ProfessorMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\StudentList.aspx.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\StudentList.aspx.designer.cs">
+      <DependentUpon>StudentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Student\StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
