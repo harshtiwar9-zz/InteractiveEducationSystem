@@ -150,7 +150,6 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="System\Out.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />
