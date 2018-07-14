@@ -5,6 +5,7 @@
     Student Home Page
     <asp:Button ID="BtnTakeQuiz" CssClass="btn-small" runat="server" Text="Take Quiz" Width="100%" OnClick="BtnTakeQuiz_Click" />
     <div runat="server" id="quizDiv">
+        <asp:Label ID="lblInstruction" runat="server"></asp:Label>
         <asp:Label ID="lblQuestion" CssClass="active" runat="server" ></asp:Label>
         <asp:TextBox ID="txtResponse" CssClass="input-field" runat="server" Width="235px"></asp:TextBox>
         

@@ -50,6 +50,7 @@ namespace InteractiveEducationSystem.FrontEnd
                 {
                     if (studentList[i].Equals(studentLogin))
                     {
+
                         BtnTakeQuiz.Enabled = true;
                        
                     }
