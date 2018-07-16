@@ -15,16 +15,20 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
     {
         SqlConnection conn = new SqlConnection();
         SqlCommand comm = new SqlCommand();
-        string connectionString =ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
+        //string connectionString =ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
 
         public object MessageBox { get; private set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
+            if (!this.IsPostBack) // to avoid reloading your control on postback
+            {
                 noDatalbl.Visible = false;
                 datafound.Visible = false;
                 answersList.Visible = false;
+            }
+           
             
 
         }
@@ -170,23 +174,7 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
         {
             Response.Redirect("CourseQuiz.aspx");
         }
-        protected void grades_update(object sender, GridViewUpdateEventArgs e)
-        {
-            try
-            {
-               
 
-
-            }
-            catch (Exception ex)
-            {
-               
-            }
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

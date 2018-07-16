@@ -37,47 +37,44 @@
                    <asp:Label ID="datafound" runat="server" Text=" Following DATA is retreived !!" ForeColor="Green"></asp:Label>    
                    <asp:Label ID="noDatalbl" runat="server" Text=" No data found !!" ForeColor="Red"></asp:Label>
 
+                   <asp:GridView ID="answersList" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataKeyNames="Student_quiz_PK" DataSourceID="IES" GridLines="Horizontal">
+                       <Columns>
+                           <asp:BoundField DataField="Student_quiz_PK" ReadOnly="true" HeaderText="SQ ID" SortExpression="Student_quiz_PK" />
+                           <asp:BoundField DataField="Quiz_id_FK" ReadOnly="true" HeaderText="Quiz ID" SortExpression="Quiz_id_FK" />
+                           <asp:BoundField DataField="Answer" ReadOnly="true" HeaderText="Submitted Answers" SortExpression="Answer" />
+                           <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                           
+                           <asp:CommandField ShowEditButton="True" />
+                       </Columns>
+                       <FooterStyle BackColor="White" ForeColor="#333333" />
+                       <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                       <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                       <RowStyle BackColor="White" ForeColor="#333333" />
+                       <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                       <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                       <SortedAscendingHeaderStyle BackColor="#487575" />
+                       <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                       <SortedDescendingHeaderStyle BackColor="#275353" />
+                   </asp:GridView>
 
-                   <asp:GridView ID="answersList" runat="server" AutoGenerateColumns="False" DataKeyNames="SQ_ID" DataSourceID="IES" Height="324px" Width="293px" CellPadding="4" ForeColor="#333333" GridLines="None">
-                       <AlternatingRowStyle BackColor="White" />
-                   <Columns>
-                       
-                       <asp:BoundField DataField="SQ_ID" HeaderText="SQ_ID" ReadOnly="True" SortExpression="SQ_ID" />
-                       <asp:BoundField DataField="Quiz_ID" HeaderText="Quiz_ID" SortExpression="Quiz_ID" ReadOnly="True" />
-                       <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" ReadOnly="True"/>
-                       <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
-                       <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                   </Columns>
-                       <EditRowStyle BackColor="#7C6F57" />
-                       <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                       <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                       <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                       <RowStyle BackColor="#E3EAEB" />
-                       <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                       <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                       <SortedAscendingHeaderStyle BackColor="#246B61" />
-                       <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                       <SortedDescendingHeaderStyle BackColor="#15524A" />
-               </asp:GridView>
-               <asp:SqlDataSource ID="IES" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" DeleteCommand="DELETE FROM [Student_quiz] WHERE [Student_quiz_PK] = @Student_quiz_PK" InsertCommand="INSERT INTO [Student_quiz] ([Student_quiz_PK], [Grade], [Answer], [Quiz_id_FK], [User_id_FK]) VALUES (@Student_quiz_PK, @Grade, @Answer, @Quiz_id_FK, @User_id_FK)" SelectCommand="SELECT [Student_quiz_PK] as SQ_ID, [Quiz_id_FK] as Quiz_ID, [Answer], [Grade] FROM [Student_quiz]" UpdateCommand="UPDATE [Student_quiz] SET [Grade] = @Grade WHERE [Student_quiz_PK] = @Student_quiz_PK">
-                   <DeleteParameters>
-                       <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
-                   </DeleteParameters>
-                   <InsertParameters>
-                       <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
-                       <asp:Parameter Name="Grade" Type="String" />
-                       <asp:Parameter Name="Answer" Type="String" />
-                       <asp:Parameter Name="Quiz_id_FK" Type="Int32" />
-                       <asp:Parameter Name="User_id_FK" Type="Int32" />
-                   </InsertParameters>
-                   <UpdateParameters>
-                       <asp:Parameter Name="Grade" Type="String" />
-                       <asp:Parameter Name="Answer" Type="String" />
-                       <asp:Parameter Name="Quiz_id_FK" Type="Int32" />
-                       <asp:Parameter Name="User_id_FK" Type="Int32" />
-                       <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
-                   </UpdateParameters>
-               </asp:SqlDataSource>
+                   <asp:SqlDataSource ID="IES" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:IES %>" DeleteCommand="DELETE FROM [Student_quiz] WHERE [Student_quiz_PK] = @original_Student_quiz_PK AND [Quiz_id_FK] = @original_Quiz_id_FK AND [Answer] = @original_Answer AND [Grade] = @original_Grade" InsertCommand="INSERT INTO [Student_quiz] ([Quiz_id_FK], [Answer], [Grade], [Student_quiz_PK]) VALUES (@Quiz_id_FK, @Answer, @Grade, @Student_quiz_PK)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [Quiz_id_FK], [Answer], [Grade], [Student_quiz_PK] FROM [Student_quiz]" UpdateCommand="UPDATE [Student_quiz] SET [Grade] = @Grade WHERE [Student_quiz_PK] = @original_Student_quiz_PK">
+                       <DeleteParameters>
+                           <asp:Parameter Name="original_Student_quiz_PK" Type="Int32" />
+                           <asp:Parameter Name="original_Quiz_id_FK" Type="Int32" />
+                           <asp:Parameter Name="original_Answer" Type="String" />
+                           <asp:Parameter Name="original_Grade" Type="String" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="Quiz_id_FK" Type="Int32" />
+                           <asp:Parameter Name="Answer" Type="String" />
+                           <asp:Parameter Name="Grade" Type="String" />
+                           <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
+                       </InsertParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="Grade" Type="String" />
+                           <asp:Parameter Name="original_Student_quiz_PK" Type="Int32" />
+                       </UpdateParameters>
+                   </asp:SqlDataSource>
 
                    </div>
                
