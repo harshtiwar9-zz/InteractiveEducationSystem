@@ -13,30 +13,48 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
     public partial class ProfessorCourses {
         
         /// <summary>
-        /// GridView1 control.
+        /// stu_answer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button stu_answer;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// datafound control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Label datafound;
         
         /// <summary>
-        /// quiz_man control.
+        /// noDatalbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button quiz_man;
+        protected global::System.Web.UI.WebControls.Label noDatalbl;
+        
+        /// <summary>
+        /// answersList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView answersList;
+        
+        /// <summary>
+        /// IES control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource IES;
     }
 }
