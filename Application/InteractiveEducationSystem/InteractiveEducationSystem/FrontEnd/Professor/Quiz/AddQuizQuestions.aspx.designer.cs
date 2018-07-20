@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem.FrontEnd.Professor {
+namespace InteractiveEducationSystem.FrontEnd.Professor.Quiz {
     
     
-    public partial class ProfessorCourses {
+    public partial class AddQuizQuestions {
         
         /// <summary>
-        /// ProfCourses control.
+        /// questions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ProfCourses;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText questions;
         
         /// <summary>
-        /// stu_answer control.
+        /// addQues_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button stu_answer;
+        protected global::System.Web.UI.WebControls.Button addQues_btn;
         
         /// <summary>
-        /// datafound control.
+        /// msg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label datafound;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msg;
         
         /// <summary>
-        /// noDatalbl control.
+        /// ShowQuestions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noDatalbl;
+        protected global::System.Web.UI.WebControls.GridView ShowQuestions;
         
         /// <summary>
-        /// answersList control.
+        /// getQuestions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView answersList;
-        
-        /// <summary>
-        /// IES control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource IES;
+        protected global::System.Web.UI.WebControls.SqlDataSource getQuestions;
     }
 }
