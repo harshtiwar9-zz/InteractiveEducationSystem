@@ -74,9 +74,11 @@
                 <ul>
                     <li><a href="#!">Home</a></li>
                     <li class="divider"></li>
-                    <li><a href="/FrontEnd/Professor/ProfessorCourses.aspx">Courses</a></li>
+                    <li><a href="ProfessorCourses.aspx">Courses</a></li>
                     <li class="divider"></li>
-                    <li><a href="~/StudentList.aspx">Student List</a></li>
+                    <li><a href="StudentList.aspx">Student List</a></li>
+                    <li class="divider"></li>
+                    <li class=""><a href="CourseList.aspx">Course List</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Tech Support</a></li>
                 </ul>
@@ -141,7 +143,6 @@
             $('.dropdown-trigger').dropdown();
             $('.collapsible').collapsible();
             $('select').formSelect();
-            $('.modal').modal();
           });
     </script>
 </html>

@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem.FrontEnd.Professor {
+namespace InteractiveEducationSystem {
     
     
-    public partial class AddQuiz {
+    public partial class Login {
         
         /// <summary>
-        /// chapter_no control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText chapter_no;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// quiz_no control.
+        /// Loginbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText quiz_no;
+        protected global::System.Web.UI.WebControls.TextBox Loginbox;
         
         /// <summary>
-        /// addQuiz_btn control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addQuiz_btn;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// msg control.
+        /// Passwordbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msg;
+        protected global::System.Web.UI.WebControls.TextBox Passwordbox;
         
         /// <summary>
-        /// AddQuestions control.
+        /// loginbutton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView AddQuestions;
-        
-        /// <summary>
-        /// getQuizid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource getQuizid;
+        protected global::System.Web.UI.WebControls.Button loginbutton;
     }
 }

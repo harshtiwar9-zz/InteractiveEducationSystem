@@ -67,28 +67,21 @@
   <ItemGroup>
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
-    <Content Include="FrontEnd\Professor\Quiz\AddQuiz.aspx" />
     <Content Include="FrontEnd\Professor\CourseList.aspx" />
     <Content Include="FrontEnd\Professor\CourseQuiz.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorCourses.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorHome.aspx" />
-    <Content Include="FrontEnd\Professor\Quiz\AddQuizQuestions.aspx" />
-    <Content Include="FrontEnd\Professor\Quiz\EditQuizQuestion.aspx" />
     <Content Include="FrontEnd\Professor\StudentList.aspx" />
     <Content Include="FrontEnd\Student\StudentHome.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Login.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrontEnd\Professor\Quiz\AddQuiz.aspx.cs">
-      <DependentUpon>AddQuiz.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Professor\Quiz\AddQuiz.aspx.designer.cs">
-      <DependentUpon>AddQuiz.aspx</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\Professor\CourseList.aspx.cs">
       <DependentUpon>CourseList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,20 +117,6 @@
     <Compile Include="FrontEnd\Professor\ProfessorMaster.Master.designer.cs">
       <DependentUpon>ProfessorMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Professor\Quiz\AddQuizQuestions.aspx.cs">
-      <DependentUpon>AddQuizQuestions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Professor\Quiz\AddQuizQuestions.aspx.designer.cs">
-      <DependentUpon>AddQuizQuestions.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\Professor\Quiz\EditQuizQuestion.aspx.cs">
-      <DependentUpon>EditQuizQuestion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\Professor\Quiz\EditQuizQuestion.aspx.designer.cs">
-      <DependentUpon>EditQuizQuestion.aspx</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\Professor\StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +144,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
