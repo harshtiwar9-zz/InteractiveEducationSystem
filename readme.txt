@@ -8,3 +8,5 @@ Team Members:
 3) Rachita Khare - 300986795
 4) TirthrajSinh Chauhan-300990930
 5) Rajankumar Gohel-300987339
+6) Gurleen Kaur - 30029601
+7) Bhavin Mohindru - 300926633
