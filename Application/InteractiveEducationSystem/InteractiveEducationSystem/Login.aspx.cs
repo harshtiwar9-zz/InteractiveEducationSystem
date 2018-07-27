@@ -74,6 +74,7 @@ namespace InteractiveEducationSystem
                 if(role.Equals("s"))
                 {
                     Server.Transfer("FrontEnd/Student/StudentHome.aspx");
+                    Session["username"] = Loginbox.Text;
                 }
                 else if(role.Equals("p"))
                 {
