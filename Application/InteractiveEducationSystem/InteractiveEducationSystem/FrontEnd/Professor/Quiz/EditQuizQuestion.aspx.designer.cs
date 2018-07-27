@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem.FrontEnd.Professor {
+namespace InteractiveEducationSystem.FrontEnd.Professor.Quiz {
     
     
-    public partial class CourseQuiz {
+    public partial class EditQuizQuestion {
         
         /// <summary>
-        /// quizchapterselection control.
+        /// quizQuestions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList quizchapterselection;
+        protected global::System.Web.UI.WebControls.GridView quizQuestions;
         
         /// <summary>
-        /// QuizChapter control.
+        /// QuizQuestionsSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource QuizChapter;
+        protected global::System.Web.UI.WebControls.SqlDataSource QuizQuestionsSource;
     }
 }

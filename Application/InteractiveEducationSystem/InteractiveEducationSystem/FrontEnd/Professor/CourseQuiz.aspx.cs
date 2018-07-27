@@ -11,7 +11,12 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void editQuiz_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Quiz/EditQuizQuestion.aspx?quiz="+quizchapterselection.SelectedValue);
         }
     }
 }
