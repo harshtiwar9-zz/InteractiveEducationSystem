@@ -12,7 +12,8 @@ namespace InteractiveEducationSystem.FrontEnd
 {
     public partial class StudentHome : System.Web.UI.Page
     {
-
+        
+        //string currentUserName = HttpContext.Current.User.Identity.Name;
         SqlConnection conn;
         SqlCommand comm;
         SqlDataReader reader;
@@ -23,15 +24,18 @@ namespace InteractiveEducationSystem.FrontEnd
         String StudentResponse;
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnSave.Visible = false;
-            string QuizStatus = "Y";
+            string username = (string)Session["username"];
+        btnSave.Visible = false;
+            int studentID = Convert.ToInt32(username);
             BtnTakeQuiz.Enabled = false;
             quizDiv.Visible = false;
             lblSuccess.Visible = false;
             List<int> studentList = new List<int>();
             conn = new SqlConnection(connectionString);
-            comm = new SqlCommand("SELECT User_id_PK FROM Student where QuizStatus =@QuizStatus", conn);
-            comm.Parameters.AddWithValue("@QuizStatus", QuizStatus);
+            comm = new SqlCommand("SELECT Question FROM Quiz_question where Quiz_question_id =(" +
+                "Select Quiz_question_id from Notification where Student_Id = "+studentID+" )", conn);
+            comm.Parameters.AddWithValue("@Student_Id", studentID);          
+
             try
             {
 
@@ -45,10 +49,10 @@ namespace InteractiveEducationSystem.FrontEnd
 
 
                 Console.WriteLine("******" + studentList);
-                int studentLogin = 60005;
+                int studentLogin = 7;
                 for (int i = 0; i < studentList.Count; i++)
                 {
-                    if (studentList[i].Equals(studentLogin))
+                    if (true)
                     {
 
                         BtnTakeQuiz.Enabled = true;
@@ -88,9 +92,14 @@ namespace InteractiveEducationSystem.FrontEnd
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
+            string username = (string)Session["username"];
+            // int studentID = Convert.ToInt32(username);
+            int studentID = 7;
             quizDiv.Visible = true;
             conn = new SqlConnection(connectionString);
-            comm = new SqlCommand("SELECT Question FROM Quiz_question", conn);
+            comm = new SqlCommand("SELECT Question FROM Quiz_question where Quiz_question_id =" +
+                "Select Quiz_question_id from Notification where Student_Id = " + studentID, conn);
+            comm.Parameters.AddWithValue("@Student_Id", studentID);     
             adapter.SelectCommand = comm;
           
             conn.Open();

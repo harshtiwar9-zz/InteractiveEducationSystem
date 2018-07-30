@@ -14,7 +14,7 @@ namespace InteractiveEducationSystem
     public partial class Login : System.Web.UI.Page
     {
         string role;
-        bool result;
+        string result;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -25,12 +25,12 @@ namespace InteractiveEducationSystem
             string password = Passwordbox.Text;
 
             result = UserLogin(userName, password);
-            page_re();
 
+            Page_re(result);
         }
 
         
-        private bool UserLogin(string userName, string password)
+        private string UserLogin(string userName, string password)
         {
             var con = ConfigurationManager.ConnectionStrings["IES"].ToString();
             using (SqlConnection myConnection = new SqlConnection(con))
@@ -52,54 +52,43 @@ namespace InteractiveEducationSystem
                     if (string.IsNullOrEmpty(role))
                     {
                         //invalid user/password , return flase 
-                        return false;
+                        return "no_user";
                     }
                     else
                     {
                         // valid login
-                        return true;
+                        return role;
                     }
 
-                   
+                    
                 }
                
             }
 
-
-
-          /*  String connectionString = WebConfigurationManager.ConnectionStrings["IES"].ConnectionString;
-            SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand com = new SqlCommand("SELECT *  from Users WHERE ID_PK = @UserName AND Password= @Password", con);
-            
-
-
-            com.Parameters.Add("@UserName", SqlDbType.Int).Value = Login1.UserName;
-            com.Parameters.Add("@Password", SqlDbType.NVarChar).Value = Login1.Password;
-
-            con.Open();
-           
-            //' execute the select statment 
-             string result = Convert.ToString(com.ExecuteScalar());
-         
-           
-            //' check the result 
-            if (string.IsNullOrEmpty(result))
-            {
-                //invalid user/password , return flase 
-                return false;
-            }
-            else
-            {
-                // valid login
-                return true;
-            }*/
         }
 
-        public void page_re()
+        public void Page_re(string role)
         {
-            if (result == true)
+            if (role != "no_user")
             {
-                Server.Transfer("Home.aspx");
+                if(role.Equals("s"))
+                {
+                    Server.Transfer("FrontEnd/Student/StudentHome.aspx");
+                    Session["username"] = Loginbox.Text;
+                }
+                else if(role.Equals("p"))
+                {
+                    Server.Transfer("FrontEnd/Professor/ProfessorHome.aspx");
+                }
+                else if(role.Equals("c"))
+                {
+                    Server.Transfer("CoursecoHome.aspx");
+                }
+                else if(role.Equals("a"))
+                {
+                    Server.Transfer("AdminHome.aspx");
+                }
+               
             }
             else
             {

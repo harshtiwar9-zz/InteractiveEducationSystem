@@ -21,9 +21,12 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            ProfCourses.Visible = false;
+
+
             if (!this.IsPostBack) // to avoid reloading your control on postback
             {
+
                 noDatalbl.Visible = false;
                 datafound.Visible = false;
                 answersList.Visible = false;
