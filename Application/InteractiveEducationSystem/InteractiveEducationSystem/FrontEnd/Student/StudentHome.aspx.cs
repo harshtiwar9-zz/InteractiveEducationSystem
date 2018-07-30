@@ -24,13 +24,13 @@ namespace InteractiveEducationSystem.FrontEnd
         protected void Page_Load(object sender, EventArgs e)
         {
             btnSave.Visible = false;
-            string QuizStatus = "Y";
+            string QuizStatus = "1";
             BtnTakeQuiz.Enabled = false;
             quizDiv.Visible = false;
             lblSuccess.Visible = false;
             List<int> studentList = new List<int>();
             conn = new SqlConnection(connectionString);
-            comm = new SqlCommand("SELECT User_id_PK FROM Student where QuizStatus =@QuizStatus", conn);
+            comm = new SqlCommand("SELECT Student_Id FROM Student where QuizStatus =@QuizStatus", conn);
             comm.Parameters.AddWithValue("@QuizStatus", QuizStatus);
             try
             {
@@ -45,7 +45,7 @@ namespace InteractiveEducationSystem.FrontEnd
 
 
                 Console.WriteLine("******" + studentList);
-                int studentLogin = 60005;
+                int studentLogin = 1;
                 for (int i = 0; i < studentList.Count; i++)
                 {
                     if (studentList[i].Equals(studentLogin))
