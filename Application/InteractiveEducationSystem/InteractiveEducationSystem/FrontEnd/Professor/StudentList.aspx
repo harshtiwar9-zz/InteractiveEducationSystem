@@ -2,30 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    Student List
+    <asp:Label ID="Label1" runat="server" Text="Student List" Font-Bold="True" Font-Underline="True"></asp:Label>
 
     <div class="row container">
 
-        <div class="input-field col l8 m4 s12 offset-l2">
-            <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Course 1</option>
-                <option value="2">Course 2</option>
-                <option value="3">Course 3</option>
-            </select>
-            <label class="red-text">Select Course</label>
-        </div>
-
-        <div class="input-field col l8 m4 s12 offset-l2">
-            <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Section 1</option>
-                <option value="2">Section 2</option>
-                <option value="3">Section 3</option>
-            </select>
-            <label class="red-text">Select Course Section</label>
-        </div>
-
+    <div>Please Select Course :
+        <asp:DropDownList ID="CourseList" runat="server"></asp:DropDownList>
     </div>
-    
+          <asp:Button ID="Btnsubmit" runat="server" Text="Submit" CssClass="btn-floating" Width="15%" OnClick="BtnSave_Click"/>
+    </div>
+    <div>
+        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    </div>
 </asp:Content>
