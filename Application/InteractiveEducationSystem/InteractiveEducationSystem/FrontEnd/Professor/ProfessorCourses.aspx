@@ -10,9 +10,13 @@
         <div class="col l8 s12 m12 offset-l4">
             <div class="row card-panel hoverable white-text">
 
-                <asp:GridView ID="ProfCourses" runat="server" CssClass="collection" AutoGenerateColumns="False" DataKeyNames="Course_Code" DataSourceID="IES">
+                <asp:GridView ID="ProfCourses" runat="server" CssClass="collection" AutoGenerateColumns="False" DataKeyNames="Student_quiz_PK" DataSourceID="IES">
                     <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="Course_Code" ControlStyle-CssClass="collection-item" DataNavigateUrlFormatString="CourseQuiz.aspx?course={0}" DataTextField="Course_name" />
+                        <asp:BoundField DataField="Comment" HeaderText="Comment" SortExpression="Comment" />
+                        <asp:BoundField DataField="Quiz_id_FK" HeaderText="Quiz_id_FK" SortExpression="Quiz_id_FK" />
+                        <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
+                        <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                        <asp:BoundField DataField="Student_quiz_PK" HeaderText="Student_quiz_PK" SortExpression="Student_quiz_PK" ReadOnly="True" />
                     </Columns>
                 </asp:GridView>
 
@@ -36,10 +40,16 @@
                    <asp:Label ID="datafound" runat="server" Text=" Following DATA is retreived !!" ForeColor="Green"></asp:Label>    
                    <asp:Label ID="noDatalbl" runat="server" Text=" No data found !!" ForeColor="Red"></asp:Label>
 
-                   <asp:GridView ID="answersList" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataKeyNames="Course_Code" DataSourceID="IES" GridLines="Horizontal">
+                   <asp:GridView ID="answersList" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" AllowPaging="True" AllowSorting="True" DataSourceID="IES" DataKeyNames="Student_quiz_PK">
                        <Columns>
-                           <asp:BoundField DataField="Course_name" HeaderText="Course_name" SortExpression="Course_name" />
-                           <asp:BoundField DataField="Course_Code" ReadOnly="true" HeaderText="Course_Code" SortExpression="Course_Code" />
+                                                                               
+                           <asp:BoundField DataField="Student_quiz_PK" HeaderText="SQ ID" SortExpression="Student_quiz_PK" ReadOnly="True" />
+                           <asp:BoundField DataField="Quiz_id_FK" HeaderText="Quiz ID" SortExpression="Quiz_id_FK" ReadOnly="True" />
+                           <asp:BoundField DataField="Answer" HeaderText="Answers" SortExpression="Answer" ReadOnly="True"/>
+                           <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                           <asp:BoundField DataField="Comment" HeaderText="Comments/Feedback" SortExpression="Comment" />
+                           <asp:CommandField ShowEditButton="True" />
+
                        </Columns>
                        <FooterStyle BackColor="White" ForeColor="#333333" />
                        <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
@@ -52,8 +62,33 @@
                        <SortedDescendingHeaderStyle BackColor="#275353" />
                    </asp:GridView>
 
-                   <asp:SqlDataSource ID="IES" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [Course_name], [Course_Code] FROM [Course]">
+
+
+                   <asp:SqlDataSource ID="IES" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" DeleteCommand="DELETE FROM [Student_quiz] WHERE [Student_quiz_PK] = @Student_quiz_PK" InsertCommand="INSERT INTO [Student_quiz] ([Comment], [Quiz_id_FK], [Answer], [Grade], [Student_quiz_PK]) VALUES (@Comment, @Quiz_id_FK, @Answer, @Grade, @Student_quiz_PK)" SelectCommand="SELECT [Comment], [Quiz_id_FK], [Answer], [Grade], [Student_quiz_PK] FROM [Student_quiz]" UpdateCommand="UPDATE [Student_quiz] SET [Comment] = @Comment, [Grade] = @Grade WHERE [Student_quiz_PK] = @Student_quiz_PK">
+                       <DeleteParameters>
+                           <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="Comment" Type="String" />
+                           <asp:Parameter Name="Quiz_id_FK" Type="Int32" />
+                           <asp:Parameter Name="Answer" Type="String" />
+                           <asp:Parameter Name="Grade" Type="String" />
+                           <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
+                       </InsertParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="Comment" Type="String" />
+                           <asp:Parameter Name="Quiz_id_FK" Type="Int32" />
+                           <asp:Parameter Name="Answer" Type="String" />
+                           <asp:Parameter Name="Grade" Type="String" />
+                           <asp:Parameter Name="Student_quiz_PK" Type="Int32" />
+                       </UpdateParameters>
                    </asp:SqlDataSource>
+
+
+
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" SelectCommand="SELECT [Comment], [Quiz_id_FK], [Answer], [Grade], [Student_quiz_PK] FROM [Student_quiz]"></asp:SqlDataSource>
+
+
 
                    </div>
                
