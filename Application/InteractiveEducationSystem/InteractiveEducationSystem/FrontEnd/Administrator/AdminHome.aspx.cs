@@ -14,9 +14,14 @@ namespace InteractiveEducationSystem.FrontEnd.Administrator
 
         }
 
-        protected void rolePage(object sender, EventArgs e)
+        protected void RolePage(object sender, EventArgs e)
         {
             Server.Transfer("~/AssignRole.aspx");
+        }
+
+        protected void MonitorUser(object sender, EventArgs e)
+        {
+            Server.Transfer("~/MonitorUser.aspx");
         }
     }
 }

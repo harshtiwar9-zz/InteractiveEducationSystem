@@ -7,28 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace InteractiveEducationSystem
 {
-    public partial class AssignRole : System.Web.UI.Page
+    public partial class AssignRole1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void Btnsubmit_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        protected void Student_Click(object sender, EventArgs e)
-        {
-            Server.Transfer("FrontEnd/Administrator/studentdata.aspx");
-
-        }
-
-        protected void Professor_Click(object sender, EventArgs e)
-        {
-            Server.Transfer("FrontEnd/Administrator/ProfessorData.aspx");
-
-        }
     }
-    }
+}

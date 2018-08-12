@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem.FrontEnd.Administrator {
+namespace InteractiveEducationSystem {
     
     
-    public partial class AdminHome {
+    public partial class AssignRole {
         
         /// <summary>
-        /// assignRole control.
+        /// Student control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button assignRole;
+        protected global::System.Web.UI.WebControls.Button Student;
         
         /// <summary>
-        /// monitorUserb control.
+        /// Professor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button monitorUserb;
+        protected global::System.Web.UI.WebControls.Button Professor;
     }
 }
