@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Administrator Home" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AdminHome.aspx.cs" Inherits="InteractiveEducationSystem.FrontEnd.Administrator.AdminHome" %>
+﻿    <%@ Page Title="Administrator Home" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AdminHome.aspx.cs" Inherits="InteractiveEducationSystem.FrontEnd.Administrator.AdminHome" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

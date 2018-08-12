@@ -13,5 +13,22 @@ namespace InteractiveEducationSystem
         {
 
         }
+
+        protected void Btnsubmit_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void Student_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("FrontEnd/Administrator/studentdata.aspx");
+
+        }
+
+        protected void Professor_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("FrontEnd/Administrator/ProfessorData.aspx");
+
+        }
     }
-}
+    }

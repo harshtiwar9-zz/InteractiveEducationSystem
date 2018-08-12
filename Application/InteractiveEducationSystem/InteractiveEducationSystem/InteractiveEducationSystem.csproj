@@ -70,6 +70,8 @@
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
     <Content Include="FrontEnd\Administrator\AdminHome.aspx" />
+    <Content Include="FrontEnd\Administrator\ProfessorData.aspx" />
+    <Content Include="FrontEnd\Administrator\studentdata.aspx" />
     <Content Include="FrontEnd\Professor\Quiz\AddQuiz.aspx" />
     <Content Include="FrontEnd\Professor\CourseList.aspx" />
     <Content Include="FrontEnd\Professor\CourseQuiz.aspx" />
@@ -99,6 +101,20 @@
     </Compile>
     <Compile Include="FrontEnd\Administrator\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\ProfessorData.aspx.cs">
+      <DependentUpon>ProfessorData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\ProfessorData.aspx.designer.cs">
+      <DependentUpon>ProfessorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\studentdata.aspx.cs">
+      <DependentUpon>studentdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\studentdata.aspx.designer.cs">
+      <DependentUpon>studentdata.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Professor\Quiz\AddQuiz.aspx.cs">
       <DependentUpon>AddQuiz.aspx</DependentUpon>
