@@ -10,15 +10,15 @@
 namespace InteractiveEducationSystem {
     
     
-    public partial class AssignRole1 {
+    public partial class RegRole {
         
         /// <summary>
-        /// stuRoleb control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button stuRoleb;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

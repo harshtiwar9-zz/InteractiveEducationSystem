@@ -3,4 +3,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Assign Role</h1>
+    <asp:Button ID="stuRoleb" runat="server" Text="Register & Assign STUDENT Role" OnClick="StuRole" />
 </asp:Content>
