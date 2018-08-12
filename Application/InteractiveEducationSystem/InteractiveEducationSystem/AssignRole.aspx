@@ -2,10 +2,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-        <asp:ListItem Value="s">Student</asp:ListItem>
-        <asp:ListItem Value="p">Professor</asp:ListItem>
-        <asp:ListItem Value="c">Course Co-ordinator</asp:ListItem>
-        <asp:ListItem Value="a">Administrator</asp:ListItem>
-    </asp:RadioButtonList>
+
+    <p>
+      <label>
+        <input runat="server" name="roleType" value="s" type="radio" />
+        <span>Student</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input runat="server" name="roleType" value="p" type="radio" />
+        <span>Professor</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input runat="server" name="roleType" value="c" type="radio" />
+        <span>Course Co-Ordinator</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input runat="server" name="roleType" value="a" type="radio" />
+        <span>Administrator</span>
+      </label>
+    </p>
+    
+
 </asp:Content>
