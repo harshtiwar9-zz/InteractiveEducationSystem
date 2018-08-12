@@ -31,15 +31,6 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
         protected global::System.Web.UI.WebControls.SqlDataSource QuizChapter;
         
         /// <summary>
-        /// initiateQuizbtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button initiateQuizbtn;
-        
-        /// <summary>
         /// initiatequizselection control.
         /// </summary>
         /// <remarks>
@@ -65,14 +56,5 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl initiateQuizMSG;
-        
-        /// <summary>
-        /// SqlDataSource2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
     }
 }

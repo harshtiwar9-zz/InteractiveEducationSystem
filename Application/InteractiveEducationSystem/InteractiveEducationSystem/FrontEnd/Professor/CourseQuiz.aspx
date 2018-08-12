@@ -47,7 +47,7 @@
                             </p>
                         </div>
                         <div class="modal-footer">
-                            <asp:Button ID="initiateQuizbtn" runat="server" OnClick="editQuiz_ServerClick" CssClass="waves-effect waves-green btn-flat" Text="Proceed" OnClientClick="M.toast('Quiz Initiated!!',3000)" />
+                            <a href="#!" runat="server" onserverclick="editQuiz_ServerClick" class="modal-close waves-effect waves-green btn-flat">Proceed</a>
                         </div>
                     </div>
                 </li>
@@ -86,7 +86,7 @@
                                 <div class="teal-text" id="initiateQuizMSG" runat="server">
 
                                 </div>
-                                
+
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -98,6 +98,5 @@
         </div>
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
 
 </asp:Content>
