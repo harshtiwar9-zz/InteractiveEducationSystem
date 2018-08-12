@@ -7,17 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace InteractiveEducationSystem
 {
-    public partial class AssignRole1 : System.Web.UI.Page
+    public partial class RegRole : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void StuRole(object sender, EventArgs e)
-        {
-            Session["usertype"] = "s";
-            Server.Transfer("RegRole.aspx");
+            string field1 = (string)(Session["usertype"]);
+           
         }
     }
 }

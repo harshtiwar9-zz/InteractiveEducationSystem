@@ -10,15 +10,15 @@
 namespace InteractiveEducationSystem {
     
     
-    public partial class AssignRole {
+    public partial class AssignRole1 {
         
         /// <summary>
-        /// RadioButtonList1 control.
+        /// stuRoleb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.Button stuRoleb;
     }
 }

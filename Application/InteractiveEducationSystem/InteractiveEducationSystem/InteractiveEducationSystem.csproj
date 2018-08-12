@@ -67,9 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AssignRole.aspx" />
+    <Content Include="MonitorUser.aspx" />
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
     <Content Include="FrontEnd\Administrator\AdminHome.aspx" />
+    <Content Include="FrontEnd\Administrator\ProfessorData.aspx" />
+    <Content Include="FrontEnd\Administrator\studentdata.aspx" />
     <Content Include="FrontEnd\Professor\Quiz\AddQuiz.aspx" />
     <Content Include="FrontEnd\Professor\CourseList.aspx" />
     <Content Include="FrontEnd\Professor\CourseQuiz.aspx" />
@@ -83,6 +86,7 @@
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="RegRole.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,12 +97,33 @@
     <Compile Include="AssignRole.aspx.designer.cs">
       <DependentUpon>AssignRole.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MonitorUser.aspx.cs">
+      <DependentUpon>MonitorUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitorUser.aspx.designer.cs">
+      <DependentUpon>MonitorUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Administrator\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FrontEnd\Administrator\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\ProfessorData.aspx.cs">
+      <DependentUpon>ProfessorData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\ProfessorData.aspx.designer.cs">
+      <DependentUpon>ProfessorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\studentdata.aspx.cs">
+      <DependentUpon>studentdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\studentdata.aspx.designer.cs">
+      <DependentUpon>studentdata.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Professor\Quiz\AddQuiz.aspx.cs">
       <DependentUpon>AddQuiz.aspx</DependentUpon>
@@ -199,6 +224,13 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegRole.aspx.cs">
+      <DependentUpon>RegRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegRole.aspx.designer.cs">
+      <DependentUpon>RegRole.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

@@ -1,11 +1,7 @@
-﻿<%@ Page Title="Register and Assign roles to new users" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AssignRole.aspx.cs" Inherits="InteractiveEducationSystem.AssignRole" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="AssignRole.aspx.cs" Inherits="InteractiveEducationSystem.AssignRole1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-        <asp:ListItem Value="s">Student</asp:ListItem>
-        <asp:ListItem Value="p">Professor</asp:ListItem>
-        <asp:ListItem Value="c">Course Co-ordinator</asp:ListItem>
-        <asp:ListItem Value="a">Administrator</asp:ListItem>
-    </asp:RadioButtonList>
+    <h1>Assign Role</h1>
+    <asp:Button ID="stuRoleb" runat="server" Text="Register & Assign STUDENT Role" OnClick="StuRole" />
 </asp:Content>
