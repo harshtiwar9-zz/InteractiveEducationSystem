@@ -86,7 +86,7 @@ namespace InteractiveEducationSystem
                 }
                 else if(role.Equals("a"))
                 {
-                    Server.Transfer("FrontEnd/Administrator/AdminHome.aspx");
+                    Server.Transfer("AdminHome.aspx");
                 }
                
             }
