@@ -6,6 +6,6 @@
     <asp:Label ID="Label1" runat="server" Text="User ID"></asp:Label>
     <asp:TextBox ID="Loginbox" runat="server"></asp:TextBox>
     <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-    <asp:TextBox ID="Passwordbox" runat="server"></asp:TextBox>
+    <asp:TextBox ID="Passwordbox"  runat="server" TextMode="Password"></asp:TextBox>
     <asp:Button ID="loginbutton" runat="server" Text="Login" OnClick="loginbutton_Click" />
 </asp:Content>
