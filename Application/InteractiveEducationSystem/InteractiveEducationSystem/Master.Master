@@ -49,6 +49,7 @@
                 <li><a href="#!">Home</a></li>
                 <li><a href="#!">Courses</a></li>
                 <li><a href="#!">Tech Support</a></li>
+                <li><a href="~/FrontEnd/Professor/QuizSetings.aspx"> Manage Quiz </a></li>
             </ul>
 
         </div>

@@ -52,7 +52,7 @@
                    <asp:TextBox ID="QuizIdTxt" runat="server" TextMode="Number"></asp:TextBox><br/>
                    <asp:Label ID="Student_idlbl" class="brand-logo center-align" runat="server" Text="   Enter Student_id to search with" ForeColor="#26a69a"></asp:Label>
                    <asp:TextBox ID="stuIdTxt" runat="server" TextMode="Number"></asp:TextBox><br/>--%>
-                    <asp:Button ID="stu_answer" class="collection-item" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click" ForeColor="White" BackColor="#26a69a" autopostback="false" />
+                    <asp:Button ID="stu_answer" class="collection-item" runat="server" Text="Submitted Answers" OnClick="Stu_answer_Click" ForeColor="White" BackColor="#26a69a" autopostback="false" />
                     <br />
                     <asp:Label ID="datafound" runat="server" Text=" Following DATA is retreived !!" ForeColor="Green"></asp:Label>
                     <asp:Label ID="noDatalbl" runat="server" Text=" No data found !!" ForeColor="Red"></asp:Label>
@@ -112,22 +112,5 @@
             </div>
         </div>
     </div>
-    <%-- <asp:Label ID="Quiz_idlbl" runat="server" Text="Enter Quiz_id to search"></asp:Label>        
-                   <asp:TextBox ID="QuizIdTxt" runat="server" TextMode="Number"></asp:TextBox><br/>
-                   <asp:Label ID="Student_idlbl" runat="server" Text="Enter Student_id to search with"></asp:Label>
-                   <asp:TextBox ID="stuIdTxt" runat="server" TextMode="Number"></asp:TextBox><br/>
-                   <asp:Button ID="stu_answer" runat="server" Text="Submitted Answers" OnClick="stu_answer_Click"/>      <br/>
-                   <asp:Label ID="datafound" runat="server" Text=" Following DATA is retreived !!" ForeColor="Green"></asp:Label>    
-                   <asp:Label ID="noDatalbl" runat="server" Text=" No data found !!" ForeColor="Red"></asp:Label>
-                   <asp:GridView ID="Grid_answers" runat="server" AutoGenerateColumns="False"  AllowPaging="True" AllowSorting="True" OnRowUpdating="grades_update">
-                       <Columns>
-                           <asp:BoundField DataField="Student_quiz_PK" HeaderText="Sq ID" SortExpression="Student_quiz_PK" /> 
-                           <asp:BoundField DataField="User_id_FK" HeaderText="User_id_FK" SortExpression="User_id_FK" />
-                           <asp:BoundField DataField="Quiz_id_FK" HeaderText="Quiz_id_FK" SortExpression="Quiz_id_FK" />
-                           <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
-                           <asp:BoundField DataField="Grade" HeaderText="Grades" SortExpression="Grade" />
-                            
-                       </Columns>
-
-                   </asp:GridView>--%>
+   
 </asp:Content>
