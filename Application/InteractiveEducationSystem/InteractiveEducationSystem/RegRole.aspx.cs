@@ -44,16 +44,22 @@ namespace InteractiveEducationSystem
                 cmd.Parameters.Add("@password", SqlDbType.NVarChar, 50);
                 cmd.Parameters["@password"].Value = GenPassword;
                 cmd.ExecuteNonQuery();
+                mycon.Close();
 
+                mycon.Open();
                 cmd2 = new SqlCommand("Select TOP 1 ID_PK FROM Users ORDER BY ID_PK DESC", mycon);
                 reader = cmd2.ExecuteReader();
                 NewUserID = reader.GetString(0);
-
-                cmd3 = new SqlCommand("INSERT INTO Student(ID_FK) VALUES (@NEWID)", mycon);
-                cmd.Parameters.Add("@NEWID", SqlDbType.Int);
-                cmd.Parameters["@NEWID"].Value = NewUserID;
-                cmd.ExecuteNonQuery();
-
+                Response.Write(NewUserID);
+                mycon.Close();
+                Response.Write("<script language=javascript>alert("+NewUserID+")</script>");
+                mycon.Open();
+                cmd3 = new SqlCommand("UPDATE Student SET [ID_FK] = @NEWID WHERE ID_FK =@CUR_ID ", mycon);
+                cmd3.Parameters.Add("@NEWID", SqlDbType.Int);
+                cmd3.Parameters["@NEWID"].Value = NewUserID;
+                cmd3.Parameters.Add("@CUR_ID", SqlDbType.Int);
+                cmd3.Parameters["@CUR_ID"].Value = selStudentId;
+                cmd3.ExecuteNonQuery();
                 mycon.Close();
             } 
             catch(Exception ex)
