@@ -101,7 +101,7 @@ namespace InteractiveEducationSystem
                    
                     Session["username"] = userName;
                     Session["role"] = role;
-                    Server.Transfer("CoursecoHome.aspx");
+                    Server.Transfer("~/FrontEnd/Course-Coordinator/CourseCoordinator.aspx");
                 }
                 else if(role.Equals("a"))
                 {

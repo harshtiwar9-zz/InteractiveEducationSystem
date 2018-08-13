@@ -116,6 +116,8 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('.sidenav').sidenav();
+            $('.dropdown-trigger').dropdown();
+            $('select').formSelect();
           });
     </script>
 
