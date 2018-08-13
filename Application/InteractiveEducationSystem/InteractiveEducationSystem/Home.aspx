@@ -4,9 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FrontEnd/Student/StudentHome.aspx">Student(Home) </asp:HyperLink>
-    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FrontEnd/Professor/ProfessorHome.aspx">Professor(Home) </asp:HyperLink>
-    <asp:HyperLink ID="ManageQuiz" runat="server" NavigateUrl="~/FrontEnd/Professor/QuizSetings.aspx">  --Manage Quiz--    </asp:HyperLink>
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FrontEnd/Student/StudentHome.aspx">StudentHome   </asp:HyperLink>
+    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FrontEnd/Professor/ProfessorHome.aspx">ProfessorHome   </asp:HyperLink>
+    <asp:HyperLink ID="ManageQuiz" runat="server" NavigateUrl="~/FrontEnd/Professor/QuizSetings.aspx">Manage Quiz    </asp:HyperLink>
 
     <a href="Login.aspx">Login</a>
 
