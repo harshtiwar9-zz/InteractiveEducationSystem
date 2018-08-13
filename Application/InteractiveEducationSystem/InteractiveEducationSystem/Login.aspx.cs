@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace InteractiveEducationSystem
 {
-
+    
     public partial class Login : System.Web.UI.Page
     {
         string role;
@@ -21,11 +21,9 @@ namespace InteractiveEducationSystem
         string connectionString = ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
         SqlConnection mycon;
         SqlCommand cmd;
-        SqlDataReader reader;
-        string PageName;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         protected void loginbutton_Click(object sender, EventArgs e)
         {
@@ -37,7 +35,7 @@ namespace InteractiveEducationSystem
             Page_re(result);
         }
 
-
+        
         private string UserLogin(string userName, string password)
         {
             var con = ConfigurationManager.ConnectionStrings["IES"].ToString();
@@ -53,10 +51,10 @@ namespace InteractiveEducationSystem
                 {
                     while (oReader.Read())
                     {
-                        role = oReader["Role"].ToString();
-
+                       role = oReader["Role"].ToString();
+                        
                     }
-
+   
                     if (string.IsNullOrEmpty(role))
                     {
                         //invalid user/password , return flase 
@@ -68,60 +66,57 @@ namespace InteractiveEducationSystem
                         return role;
                     }
 
-
+                    
                 }
-
+               
             }
 
         }
 
         public void Page_re(string role)
         {
-
+            
             mycon = new SqlConnection(connectionString);
 
             if (role != "no_user")
             {
-                if (role.Equals("s"))
+                if(role.Equals("s"))
                 {
-                   /* cmd = new SqlCommand("SELECT First_name from Student WHERE Id_FK = @UserName", mycon);
-                    //reader = cmd.ExecuteReader();
-                    PageName = reader.GetString(0);
-                    Response.Write("<script language=javascript>alert(" + PageName + ")</script>");
-                    */
-                    Session["username"] = userName;
+                    cmd = new SqlCommand("SELECT First_name from Student WHERE Id_FK = @UserName", mycon);
+
+                    Session["username"] =userName ;
                     Session["role"] = role;
 
                     Server.Transfer("FrontEnd/Student/StudentHome.aspx");
                 }
-                else if (role.Equals("p"))
+                else if(role.Equals("p"))
                 {
-
+                   
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("FrontEnd/Professor/ProfessorHome.aspx");
                 }
-                else if (role.Equals("c"))
+                else if(role.Equals("c"))
                 {
-
+                   
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("CoursecoHome.aspx");
                 }
-                else if (role.Equals("a"))
+                else if(role.Equals("a"))
                 {
-
+                  
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("FrontEnd/Administrator/AdminHome.aspx");
                 }
-
+               
             }
             else
             {
                 Server.Transfer("Login.aspx");
             }
         }
-
+       
     }
 }

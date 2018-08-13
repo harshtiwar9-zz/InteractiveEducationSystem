@@ -10,33 +10,24 @@
 namespace InteractiveEducationSystem {
     
     
-    public partial class AssignRole {
+    public partial class RegProfRole {
         
         /// <summary>
-        /// Student control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Student;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Professor control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Professor;
-        
-        /// <summary>
-        /// Course_Coordinator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Course_Coordinator;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

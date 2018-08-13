@@ -30,4 +30,6 @@
 
           <asp:Button ID="Student" runat="server" Text="Student" CssClass="btn-floating" Width="15%" OnClick="Student_Click" />
           <asp:Button ID="Professor" runat="server" Text="Professor" CssClass="auto-style1" Width="15%" OnClick="Professor_Click" />
+          <asp:Button ID="Course_Coordinator" runat="server" Text="Course-Coordinator" CssClass="auto-style1" Width="15%"  OnClick="Coordinator_Click" />
+
     </asp:Content>

@@ -19,5 +19,17 @@ namespace InteractiveEducationSystem
             Session["usertype"] = "s";
             Server.Transfer("RegRole.aspx");
         }
+
+        protected void ProfessorRole_Click(object sender, EventArgs e)
+        {
+            Session["usertype"] = "p";
+            Server.Transfer("RegProfRole.aspx");
+        }
+
+        protected void CourseCordinatorRole_Click(object sender, EventArgs e)
+        {
+            Session["usertype"] = "c";
+            Server.Transfer("RegCourseCordinator.aspx");
+        }
     }
 }
