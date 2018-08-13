@@ -67,6 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AssignRole.aspx" />
+    <Content Include="FrontEnd\Administrator\CoordinatorData.aspx" />
+    <Content Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx" />
     <Content Include="FrontEnd\Professor\QuizSetings.aspx" />
     <Content Include="FrontEnd\Student\StudentProfile.aspx" />
     <Content Include="MonitorUser.aspx" />
@@ -88,6 +90,8 @@
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="RegCourseCordinator.aspx" />
+    <Content Include="RegProfRole.aspx" />
     <Content Include="RegRole.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +102,20 @@
     </Compile>
     <Compile Include="AssignRole.aspx.designer.cs">
       <DependentUpon>AssignRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\CoordinatorData.aspx.cs">
+      <DependentUpon>CoordinatorData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Administrator\CoordinatorData.aspx.designer.cs">
+      <DependentUpon>CoordinatorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx.cs">
+      <DependentUpon>CourseCoordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx.designer.cs">
+      <DependentUpon>CourseCoordinator.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Professor\QuizSetings.aspx.cs">
       <DependentUpon>QuizSetings.aspx</DependentUpon>
@@ -240,6 +258,20 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegCourseCordinator.aspx.cs">
+      <DependentUpon>RegCourseCordinator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegCourseCordinator.aspx.designer.cs">
+      <DependentUpon>RegCourseCordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegProfRole.aspx.cs">
+      <DependentUpon>RegProfRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegProfRole.aspx.designer.cs">
+      <DependentUpon>RegProfRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegRole.aspx.cs">
       <DependentUpon>RegRole.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem {
+namespace InteractiveEducationSystem.FrontEnd.Course_Coordinator {
     
     
-    public partial class AssignRole {
+    public partial class CourseCoordinator {
         
         /// <summary>
-        /// Student control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Student;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Professor control.
+        /// CourseList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Professor;
+        protected global::System.Web.UI.WebControls.DropDownList CourseList;
         
         /// <summary>
-        /// Course_Coordinator control.
+        /// Btnsubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Course_Coordinator;
+        protected global::System.Web.UI.WebControls.Button Btnsubmit;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
