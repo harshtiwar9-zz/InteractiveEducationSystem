@@ -30,5 +30,12 @@ namespace InteractiveEducationSystem
             Server.Transfer("FrontEnd/Administrator/ProfessorData.aspx");
 
         }
+        protected void Coordinator_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("FrontEnd/Administrator/CoordinatorData.aspx");
+
+        }
+
+
     }
     }
