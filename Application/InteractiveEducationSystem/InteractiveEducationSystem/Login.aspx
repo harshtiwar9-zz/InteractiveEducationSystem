@@ -8,4 +8,5 @@
     <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
     <asp:TextBox ID="Passwordbox"  runat="server" TextMode="Password"></asp:TextBox>
     <asp:Button ID="loginbutton" runat="server" Text="Login" OnClick="loginbutton_Click" />
+    <asp:Label ID="demol" runat="server" Text="HERE"></asp:Label>
 </asp:Content>

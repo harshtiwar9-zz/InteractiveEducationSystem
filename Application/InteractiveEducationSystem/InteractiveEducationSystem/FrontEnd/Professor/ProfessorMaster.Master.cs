@@ -9,9 +9,18 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 {
     public partial class ProfessorMaster : System.Web.UI.MasterPage
     {
+        string pagename;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            pagename = (string)Session["PageName"];
+            if (pagename != null)
+            {
+                UserPageName.Text = pagename;
+            }
+            else
+            {
+                LoginDetails.Visible = false;
+            }
         }
     }
 }
