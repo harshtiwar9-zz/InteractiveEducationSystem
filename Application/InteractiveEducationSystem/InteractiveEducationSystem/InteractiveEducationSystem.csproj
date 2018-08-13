@@ -69,6 +69,7 @@
     <Content Include="AssignRole.aspx" />
     <Content Include="FrontEnd\Administrator\CoordinatorData.aspx" />
     <Content Include="FrontEnd\Professor\QuizSetings.aspx" />
+    <Content Include="FrontEnd\Student\StudentProfile.aspx" />
     <Content Include="MonitorUser.aspx" />
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="FrontEnd\Professor\QuizSetings.aspx.designer.cs">
       <DependentUpon>QuizSetings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Student\StudentProfile.aspx.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Student\StudentProfile.aspx.designer.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="MonitorUser.aspx.cs">
       <DependentUpon>MonitorUser.aspx</DependentUpon>
