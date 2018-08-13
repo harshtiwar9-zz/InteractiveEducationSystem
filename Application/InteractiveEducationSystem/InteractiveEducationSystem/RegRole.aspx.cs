@@ -24,10 +24,12 @@ namespace InteractiveEducationSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             UserTypeSession = (string)(Session["usertype"]);
+           
         }
 
         protected void RegisterUser(object sender, EventArgs e)
         {
+            
             string selStudentId = GridView1.SelectedRow.Cells[1].Text;
             string selFname = GridView1.SelectedRow.Cells[2].Text;
             string selLname = GridView1.SelectedRow.Cells[3].Text;
@@ -47,16 +49,7 @@ namespace InteractiveEducationSystem
                 mycon.Close();
 
                 mycon.Open();
-                cmd2 = new SqlCommand("Select TOP 1 ID_PK FROM Users ORDER BY ID_PK DESC", mycon);
-                reader = cmd2.ExecuteReader();
-                NewUserID = reader.GetString(0);
-                Response.Write(NewUserID);
-                mycon.Close();
-                Response.Write("<script language=javascript>alert("+NewUserID+")</script>");
-                mycon.Open();
-                cmd3 = new SqlCommand("UPDATE Student SET [ID_FK] = @NEWID WHERE ID_FK =@CUR_ID ", mycon);
-                cmd3.Parameters.Add("@NEWID", SqlDbType.Int);
-                cmd3.Parameters["@NEWID"].Value = NewUserID;
+                cmd3 = new SqlCommand("Update Student SET [ID_FK] =(Select TOP 1 ID_PK FROM Users ORDER BY ID_PK DESC) WHERE Student_Id =@CUR_ID ", mycon);
                 cmd3.Parameters.Add("@CUR_ID", SqlDbType.Int);
                 cmd3.Parameters["@CUR_ID"].Value = selStudentId;
                 cmd3.ExecuteNonQuery();
@@ -66,7 +59,8 @@ namespace InteractiveEducationSystem
             {
                 Response.Write("<script language=javascript>alert("+ ex.Message +")</script>");
             }
-
+            GridView1.DataBind();
+            
         }
     }
 }
