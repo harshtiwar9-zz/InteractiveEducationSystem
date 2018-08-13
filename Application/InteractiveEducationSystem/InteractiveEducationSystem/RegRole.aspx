@@ -25,7 +25,7 @@
             <asp:Parameter Name="Student_Id" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateSelectButton="True" OnSelectedIndexChanged="RegisterUser" AutoGenerateColumns="False" DataKeyNames="Student_Id">
+    <asp:GridView ID="GridView1" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No Unregistered User" DataSourceID="SqlDataSource1" AutoGenerateSelectButton="True" OnSelectedIndexChanged="RegisterUser" AutoGenerateColumns="False" DataKeyNames="Student_Id">
         <Columns>
             <asp:BoundField DataField="Student_Id" HeaderText="Student_Id" InsertVisible="False" ReadOnly="True" SortExpression="Student_Id" />
             <asp:BoundField DataField="First_name" HeaderText="First_name" SortExpression="First_name" />
@@ -36,5 +36,5 @@
             <asp:BoundField DataField="QuizId" HeaderText="QuizId" SortExpression="QuizId" />
         </Columns>
     </asp:GridView>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+   
 </asp:Content>
