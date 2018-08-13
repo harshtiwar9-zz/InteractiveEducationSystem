@@ -59,11 +59,13 @@
             
             <blockquote class="col l2 center card-title">
                 <ul>
-                    <li><a href="#!">Home</a></li>
+                    <li><a href="/FrontEnd/Student/StudentHome.aspx">Home</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Courses</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Tech Support</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/FrontEnd/Student/StudentProfile.aspx">Edit profile</a></li>
                 </ul>
             </blockquote>
             

@@ -11,6 +11,11 @@ namespace InteractiveEducationSystem.FrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String UserTypeSession;
+            if (!IsPostBack)
+            {
+                UserTypeSession = (string)(Session["username"]);
+            }
 
         }
     }
