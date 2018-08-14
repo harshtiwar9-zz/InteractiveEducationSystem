@@ -9,9 +9,10 @@
         <asp:Label ID="lblQuestion" CssClass="active" runat="server" ></asp:Label>
         <asp:TextBox ID="txtResponse" CssClass="input-field" runat="server" Width="235px"></asp:TextBox>
         
-        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn-floating" Width="15%" OnClick="btnNext_Click" />
         <asp:Button ID="btnSave" runat="server" Text="Submit" CssClass="btn-floating" Width="15%" OnClick="btnSave_Click"/>
     </div>
     <asp:Label ID="lblSuccess" CssClass="centered" runat="server"  ForeColor="#0066FF" Height="20"></asp:Label>
     <asp:Label ID="demolabel" runat="server" Text="Label"></asp:Label>
+
+
 </asp:Content>

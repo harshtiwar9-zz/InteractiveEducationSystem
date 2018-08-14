@@ -119,6 +119,9 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
                             cmd3.Parameters["@Student_id_FK"].Value = dv.Table.Rows[randomNO]["ID_FK"];
                             cmd3.ExecuteNonQuery();
 
+                            cmd = new SqlCommand("Update Student set QuizId = "+selectedQuiz+", QuizStatus = 'Y' Where ID_FK = "+ dv.Table.Rows[randomNO]["ID_FK"] +";",mycon);
+                            cmd.ExecuteNonQuery();
+
                             cmd2 = new SqlCommand("INSERT INTO Notification (Message,Quiz_id_FK, Quiz_question_id, Student_Id) VALUES (@Message, @Quiz_id_FK, @Quiz_question_id, @Student_Id)", mycon);
                             cmd2.Parameters.Add("@Message", SqlDbType.NVarChar, 50);
                             cmd2.Parameters["@Message"].Value = "Quiz " + selectedQuiz + " Activated For You.";
@@ -165,6 +168,9 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
                             cmd3.Parameters.Add("@Student_id_FK", SqlDbType.Int);
                             cmd3.Parameters["@Student_id_FK"].Value = dv2.Table.Rows[randomNO]["ID_FK"];
                             cmd3.ExecuteNonQuery();
+
+                            cmd = new SqlCommand("Update Student set QuizId = " + selectedQuiz + ", QuizStatus = 'Y' Where ID_FK = " + dv2.Table.Rows[randomNO]["ID_FK"] + ";", mycon);
+                            cmd.ExecuteNonQuery();
 
                             cmd2 = new SqlCommand("INSERT INTO Notification (Message,Quiz_id_FK, Quiz_question_id, Student_Id) VALUES (@Message, @Quiz_id_FK, @Quiz_question_id, @Student_Id)", mycon);
                             cmd2.Parameters.Add("@Message", SqlDbType.NVarChar, 50);
