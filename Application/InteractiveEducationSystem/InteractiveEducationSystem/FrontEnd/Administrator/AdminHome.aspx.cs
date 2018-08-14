@@ -23,5 +23,10 @@ namespace InteractiveEducationSystem.FrontEnd.Administrator
         {
             Server.Transfer("~/MonitorUser.aspx");
         }
+
+        protected void RConflicts(object sender, EventArgs e)
+        {
+            Server.Transfer("~/IConflict.aspx");
+        }
     }
 }

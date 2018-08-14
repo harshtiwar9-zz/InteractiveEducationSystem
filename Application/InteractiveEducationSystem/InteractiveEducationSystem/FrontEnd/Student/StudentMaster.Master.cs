@@ -33,5 +33,10 @@ namespace InteractiveEducationSystem.FrontEnd
             Session["PageName"] = null;
             Server.Transfer("~/Login.aspx");
         }
+
+        protected void ResolveIssue(object sender, EventArgs e)
+        {
+            Server.Transfer("ResolveConflicts.aspx");
+        }
     }
 }

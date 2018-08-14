@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="AssignRole.aspx" />
     <Content Include="FrontEnd\Administrator\CoordinatorData.aspx" />
+    <Content Include="IConflict.aspx" />
     <Content Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorProfile.aspx" />
     <Content Include="FrontEnd\Professor\QuizSetings.aspx" />
@@ -94,6 +95,7 @@
     <Content Include="RegCourseCordinator.aspx" />
     <Content Include="RegProfRole.aspx" />
     <Content Include="RegRole.aspx" />
+    <Content Include="ResolveConflicts.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +112,13 @@
     </Compile>
     <Compile Include="FrontEnd\Administrator\CoordinatorData.aspx.designer.cs">
       <DependentUpon>CoordinatorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IConflict.aspx.cs">
+      <DependentUpon>IConflict.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IConflict.aspx.designer.cs">
+      <DependentUpon>IConflict.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx.cs">
       <DependentUpon>CourseCoordinator.aspx</DependentUpon>
@@ -286,6 +295,13 @@
     </Compile>
     <Compile Include="RegRole.aspx.designer.cs">
       <DependentUpon>RegRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResolveConflicts.aspx.cs">
+      <DependentUpon>ResolveConflicts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResolveConflicts.aspx.designer.cs">
+      <DependentUpon>ResolveConflicts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

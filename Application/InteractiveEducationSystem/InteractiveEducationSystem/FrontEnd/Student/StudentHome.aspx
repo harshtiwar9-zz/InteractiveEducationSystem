@@ -14,5 +14,4 @@
     <asp:Label ID="lblSuccess" CssClass="centered" runat="server"  ForeColor="#0066FF" Height="20"></asp:Label>
     <asp:Label ID="demolabel" runat="server" Text="Label"></asp:Label>
 
-
 </asp:Content>

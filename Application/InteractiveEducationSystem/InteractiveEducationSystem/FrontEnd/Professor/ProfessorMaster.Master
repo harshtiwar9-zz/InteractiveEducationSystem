@@ -104,6 +104,11 @@
             <footer class="page-footer">
                 <div class="container">
                     <div class="row">
+
+                        <div class="col l12 s12 m12 offset-l1 right-align">
+                            <a href="~/ResolveConflicts.aspx" class="btn-floating btn-large waves-effect waves-light red" runat="server" onclick="ResolveIssue" id="resolveIssuebtn"><i class="material-icons">announcement</i></a>
+                        </div>
+
                         <div class="col l6 s12">
                             <h5 class="white-text">Footer Content</h5>
                             <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>

@@ -10,33 +10,24 @@
 namespace InteractiveEducationSystem.FrontEnd.Administrator {
     
     
-    public partial class AdminHome {
+    public partial class IConflict {
         
         /// <summary>
-        /// assignRole control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button assignRole;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// monitorUserb control.
+        /// getIssue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button monitorUserb;
-        
-        /// <summary>
-        /// RIssue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RIssue;
+        protected global::System.Web.UI.WebControls.SqlDataSource getIssue;
     }
 }
