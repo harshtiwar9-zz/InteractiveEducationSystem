@@ -47,9 +47,8 @@
                     <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
                 </li>
                 <li><a href="#!">Home</a></li>
-                <li><a href="#!">Courses</a></li>
                 <li><a href="#!">Tech Support</a></li>
-                <li><a href="~/FrontEnd/Professor/QuizSetings.aspx"> Manage Quiz </a></li>
+                
             </ul>
 
         </div>
@@ -62,9 +61,7 @@
             
             <blockquote class="col l2 center card-title">
                 <ul>
-                    <li><a href="#!">Home</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Courses</a></li>
+                    <li><a href="Home.aspx">Home</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Tech Support</a></li>
                 </ul>
