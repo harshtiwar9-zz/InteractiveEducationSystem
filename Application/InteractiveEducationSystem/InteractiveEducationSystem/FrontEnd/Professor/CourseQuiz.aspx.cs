@@ -14,7 +14,8 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
     public partial class CourseQuiz : System.Web.UI.Page
     {
         SqlConnection mycon;
-        SqlCommand cmd;
+        SqlCommand cmd,cmd2,cmd3;
+        SqlDataReader reader, reader2;
 
         string connectionString = ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
 
@@ -32,7 +33,7 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 
         protected void editQuiz_ServerClick(object sender, EventArgs e)
         {
-            Response.Redirect("Quiz/EditQuizQuestion.aspx?quiz="+quizchapterselection.SelectedValue);
+            Response.Redirect("Quiz/EditQuizQuestion.aspx?quiz=" + quizchapterselection.SelectedValue);
         }
 
         protected void initiateQuiz_ServerClick(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
             int selectedQuiz = Convert.ToInt32(initiatequizselection.SelectedValue);
             //Insert query for adding quiz
 
-            cmd = new SqlCommand("Update Quiz SET QuizStatus = 1 where Quiz_id_PK = "+selectedQuiz + ";", mycon);
+            cmd = new SqlCommand("Update Quiz SET QuizStatus = 1 where Quiz_id_PK = " + selectedQuiz + ";", mycon);
 
             try
             {
@@ -74,33 +75,115 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 
             //Insert query for adding quiz
 
-            cmd = new SqlCommand("SELECT Student_Id FROM Student WHERE (Student_Id != (SELECT Student_Id_FK FROM Student_quiz WHERE (Quiz_id_FK = "+selectedQuiz+")))", mycon);
+            cmd = new SqlCommand("SELECT ID_FK FROM Student WHERE Student_Id NOT IN(SELECT Student_id_FK FROM Student_quiz WHERE Quiz_id_FK = " + selectedQuiz+")", mycon);
+            //cmd = new SqlCommand("Select S.Student_Id From Student S INNER JOIN Student_quiz SQ ON S.Student_Id = SQ.Student_id_FK Where SQ.Quiz_id_FK != " + selectedQuiz + "; ", mycon);
+
+            //studentIDdata2.SelectCommand = "SELECT Student_Id FROM Student WHERE Student_Id NOT IN(SELECT Student_id_FK FROM Student_quiz WHERE Quiz_id_FK = " + selectedQuiz + ")";
+            //studentIDdata2.DataBind();
 
             try
             {
                 mycon.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                var items = new List<int>();
-                
-                while (reader.Read())
-                {
-                    items.Add(Convert.ToInt32(reader["Student_Id"]));
-                }
-                reader.Close();
+                reader = cmd.ExecuteReader();
 
+                int i = 0;
+
+                DataView dv3 = (DataView)quizQuestionID.Select(DataSourceSelectArguments.Empty);
                 Random random = new Random();
-                int[] randomStudentID = new int[3];
-                for (int j = 0; j < 3; j++)
+
+                if (reader.HasRows.Equals(false))
                 {
-                    int randomNO = items[random.Next(0, items.Count())];
-                    randomStudentID[j] = items[randomNO];
-                    //randomID.InnerText += randomStudentID[j].ToString();
-                    cmd = new SqlCommand("INSERT INTO Student_quiz (Quiz_id_FK, Student_id_FK) VALUES (@Quiz_id_FK, @Student_id_FK)", mycon);
-                    cmd.Parameters.Add("@Quiz_id_FK", SqlDbType.Int);
-                    cmd.Parameters["@Quiz_id_FK"].Value = selectedQuiz;
-                    cmd.Parameters.Add("@Student_id_FK", SqlDbType.Int);
-                    cmd.Parameters["@Student_id_FK"].Value = randomStudentID[j];
-                    cmd.ExecuteNonQuery();
+                    cmd.Cancel();
+                    mycon.Close();
+                    mycon.Open();
+
+                    DataView dv = (DataView)studentIDdata.Select(DataSourceSelectArguments.Empty);
+
+                    for (int u = 0; u < dv.Count; u++)
+                    {
+                        dataList.InnerText += dv.Table.Rows[u]["ID_FK"]+"\n 1st";
+                    }
+
+                    try
+                    {
+
+                        for (int j = 0; j < 3; j++)
+                        {
+
+                            int randomNO = random.Next(0, dv.Count);
+
+                            cmd3 = new SqlCommand("INSERT INTO Student_quiz (Quiz_id_FK, Student_id_FK) VALUES (@Quiz_id_FK, @Student_id_FK)", mycon);
+                            cmd3.Parameters.Add("@Quiz_id_FK", SqlDbType.Int);
+                            cmd3.Parameters["@Quiz_id_FK"].Value = selectedQuiz;
+                            cmd3.Parameters.Add("@Student_id_FK", SqlDbType.Int);
+                            cmd3.Parameters["@Student_id_FK"].Value = dv.Table.Rows[randomNO]["ID_FK"];
+                            cmd3.ExecuteNonQuery();
+
+                            cmd2 = new SqlCommand("INSERT INTO Notification (Message,Quiz_id_FK, Quiz_question_id, Student_Id) VALUES (@Message, @Quiz_id_FK, @Quiz_question_id, @Student_Id)", mycon);
+                            cmd2.Parameters.Add("@Message", SqlDbType.NVarChar, 50);
+                            cmd2.Parameters["@Message"].Value = "Quiz " + selectedQuiz + " Activated For You.";
+                            cmd2.Parameters.Add("@Quiz_id_FK", SqlDbType.Int);
+                            cmd2.Parameters["@Quiz_id_FK"].Value = selectedQuiz;
+                            cmd2.Parameters.Add("@Quiz_question_id", SqlDbType.Int);
+                            cmd2.Parameters["@Quiz_question_id"].Value = dv3.Table.Rows[random.Next(0, dv3.Count)]["Quiz_question_id"];
+                            cmd2.Parameters.Add("@Student_Id", SqlDbType.Int);
+                            cmd2.Parameters["@Student_Id"].Value = dv.Table.Rows[randomNO]["ID_FK"];
+                            cmd2.ExecuteNonQuery();
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        dataList.InnerText += ex.Message;
+                    }
+
+        }
+                else
+                {
+
+                    //while (reader.Read())
+                    //  dataList.InnerText += reader.GetInt32(0);
+
+
+                    DataView dv2 = (DataView)studentIDdata2.Select(DataSourceSelectArguments.Empty);
+
+                    for(int u = 0; u < dv2.Count; u++)
+                    {
+                        dataList.InnerText += dv2.Table.Rows[u]["ID_FK"]+"\n 2nd";
+                    }
+
+                    try
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            int randomNO = random.Next(0, dv2.Count);
+
+                            cmd3 = new SqlCommand("INSERT INTO Student_quiz (Quiz_id_FK, Student_id_FK) VALUES (@Quiz_id_FK, @Student_id_FK)", mycon);
+                            cmd3.Parameters.Add("@Quiz_id_FK", SqlDbType.Int);
+                            cmd3.Parameters["@Quiz_id_FK"].Value = selectedQuiz;
+                            cmd3.Parameters.Add("@Student_id_FK", SqlDbType.Int);
+                            cmd3.Parameters["@Student_id_FK"].Value = dv2.Table.Rows[randomNO]["ID_FK"];
+                            cmd3.ExecuteNonQuery();
+
+                            cmd2 = new SqlCommand("INSERT INTO Notification (Message,Quiz_id_FK, Quiz_question_id, Student_Id) VALUES (@Message, @Quiz_id_FK, @Quiz_question_id, @Student_Id)", mycon);
+                            cmd2.Parameters.Add("@Message", SqlDbType.NVarChar, 50);
+                            cmd2.Parameters["@Message"].Value = "Quiz " + selectedQuiz + " Activated For You.";
+                            cmd2.Parameters.Add("@Quiz_id_FK", SqlDbType.Int);
+                            cmd2.Parameters["@Quiz_id_FK"].Value = selectedQuiz;
+                            cmd2.Parameters.Add("@Quiz_question_id", SqlDbType.Int);
+                            cmd2.Parameters["@Quiz_question_id"].Value = dv3.Table.Rows[random.Next(0, dv3.Count)]["Quiz_question_id"];
+                            cmd2.Parameters.Add("@Student_Id", SqlDbType.Int);
+                            cmd2.Parameters["@Student_Id"].Value = dv2.Table.Rows[randomNO]["ID_FK"];
+                            cmd2.ExecuteNonQuery();
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        dataList.InnerText += ex.Message;
+                    }
+
                 }
                 mycon.Close();
             }

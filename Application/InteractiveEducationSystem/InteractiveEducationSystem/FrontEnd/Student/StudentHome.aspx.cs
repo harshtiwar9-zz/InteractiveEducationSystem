@@ -25,7 +25,7 @@ namespace InteractiveEducationSystem.FrontEnd
         protected void Page_Load(object sender, EventArgs e)
         {
             string username = (string)Session["username"];
-        btnSave.Visible = false;
+            btnSave.Visible = false;
             int studentID = Convert.ToInt32(username);
             BtnTakeQuiz.Enabled = false;
             quizDiv.Visible = false;
@@ -52,7 +52,7 @@ namespace InteractiveEducationSystem.FrontEnd
                 int studentLogin = 7;
                 for (int i = 0; i < studentList.Count; i++)
                 {
-                    if (true)
+                    if (studentID.Equals())
                     {
 
                         BtnTakeQuiz.Enabled = true;
