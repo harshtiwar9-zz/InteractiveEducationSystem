@@ -10,6 +10,7 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
     public partial class ProfessorMaster : System.Web.UI.MasterPage
     {
         string pagename;
+        string UserTypeSession;
         protected void Page_Load(object sender, EventArgs e)
         {
             pagename = (string)Session["PageName"];
@@ -20,6 +21,10 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
             else
             {
                 LoginDetails.Visible = false;
+            }
+            if (!IsPostBack)
+            {
+                UserTypeSession = (string)(Session["username"]);
             }
         }
     }
