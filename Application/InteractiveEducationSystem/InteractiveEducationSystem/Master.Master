@@ -67,7 +67,7 @@
 
             <blockquote class="col l2 center card-title">
                 <ul>
-                    <li><a href="#!">Home</a></li>
+                    <li><a href="Home.aspx">Home</a></li>
                     <li class="divider"></li>
                     <li><a href="#!">Courses</a></li>
                     <li class="divider"></li>
@@ -110,7 +110,7 @@
 
     </form>
 
-
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
