@@ -18,14 +18,16 @@ namespace InteractiveEducationSystem.FrontEnd
         SqlCommand comm;
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
-        string connectionString =
-        ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
+        string connectionString = ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
         DataSet questionList = new DataSet();
         String StudentResponse;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string username = (string)Session["username"];
-        btnSave.Visible = false;
+           
+            btnSave.Visible = false;
             int studentID = Convert.ToInt32(username);
             BtnTakeQuiz.Enabled = false;
             quizDiv.Visible = false;

@@ -31,6 +31,8 @@
                 <nav>
                     <div class="nav-wrapper">
                         <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
+                        <div runat="server" id="LoginDetails" class="right"> Welcome <asp:Label ID="UserPageName" runat="server" Text=""></asp:Label>
+                        <asp:Button ID="LogOut" runat="server" Text="Logout" /></div>
                         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                             <i class="material-icons">menu
                             </i>

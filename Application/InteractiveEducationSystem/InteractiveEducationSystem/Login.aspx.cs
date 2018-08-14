@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -21,22 +22,24 @@ namespace InteractiveEducationSystem
         string connectionString = ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
         SqlConnection mycon;
         SqlCommand cmd;
+        SqlDataReader reader;
+        string PageName;
         protected void Page_Load(object sender, EventArgs e)
         {
             
         }
-        protected void loginbutton_Click(object sender, EventArgs e)
+        public void loginbutton_Click(object sender, EventArgs e)
         {
             userName = Loginbox.Text;
             password = Passwordbox.Text;
-
+            demol.Text = userName;
             result = UserLogin(userName, password);
 
             Page_re(result);
         }
 
         
-        private string UserLogin(string userName, string password)
+        public string UserLogin(string userName, string password)
         {
             var con = ConfigurationManager.ConnectionStrings["IES"].ToString();
             using (SqlConnection myConnection = new SqlConnection(con))
@@ -75,37 +78,35 @@ namespace InteractiveEducationSystem
 
         public void Page_re(string role)
         {
-            
+           
             mycon = new SqlConnection(connectionString);
 
             if (role != "no_user")
             {
                 if(role.Equals("s"))
                 {
-                    cmd = new SqlCommand("SELECT First_name from Student WHERE Id_FK = @UserName", mycon);
-
+                    StudentName(userName);
                     Session["username"] =userName ;
                     Session["role"] = role;
-
                     Server.Transfer("FrontEnd/Student/StudentHome.aspx");
                 }
                 else if(role.Equals("p"))
                 {
-                   
+                    ProfessorName(userName);
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("FrontEnd/Professor/ProfessorHome.aspx");
                 }
                 else if(role.Equals("c"))
                 {
-                   
+                    CoordinatorName(userName);
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("~/FrontEnd/Course-Coordinator/CourseCoordinator.aspx");
                 }
                 else if(role.Equals("a"))
                 {
-                  
+                    AdministratorName(userName);
                     Session["username"] = userName;
                     Session["role"] = role;
                     Server.Transfer("FrontEnd/Administrator/AdminHome.aspx");
@@ -117,6 +118,69 @@ namespace InteractiveEducationSystem
                 Server.Transfer("Login.aspx");
             }
         }
-       
+        public void StudentName(string userid)
+        {
+            mycon.Open();
+            cmd = new SqlCommand("SELECT First_name from Student WHERE ID_FK = @UserName", mycon);
+            cmd.Parameters.AddWithValue("@UserName", userid);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows.Equals(true))
+            {
+                while (reader.Read())
+                {
+                    PageName = reader[0].ToString();
+                }
+                Session["PageName"] = PageName;
+            }
+            mycon.Close();
+        }
+        public void ProfessorName(string userid)
+        {
+            mycon.Open();
+            cmd = new SqlCommand("SELECT First_name from Professor WHERE ID_FK = @UserName", mycon);
+            cmd.Parameters.AddWithValue("@UserName", userid);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows.Equals(true))
+            {
+                while (reader.Read())
+                {
+                    PageName = reader[0].ToString();
+                }
+                Session["PageName"] = PageName;
+            }
+            mycon.Close();
+        }
+        public void CoordinatorName(string userid)
+        {
+            mycon.Open();
+            cmd = new SqlCommand("SELECT First_name from Course_coordinator WHERE ID_FK = @UserName", mycon);
+            cmd.Parameters.AddWithValue("@UserName", userid);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows.Equals(true))
+            {
+                while (reader.Read())
+                {
+                    PageName = reader[0].ToString();
+                }
+                Session["PageName"] = PageName;
+            }
+            mycon.Close();
+        }
+        public void AdministratorName(string userid)
+        {
+            mycon.Open();
+            cmd = new SqlCommand("SELECT First_name from Administrator WHERE ID_FK = @UserName", mycon);
+            cmd.Parameters.AddWithValue("@UserName", userid);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows.Equals(true))
+            {
+                while (reader.Read())
+                {
+                    PageName = reader[0].ToString();
+                }
+                Session["PageName"] = PageName;
+            }
+            mycon.Close();
+        }
     }
 }
