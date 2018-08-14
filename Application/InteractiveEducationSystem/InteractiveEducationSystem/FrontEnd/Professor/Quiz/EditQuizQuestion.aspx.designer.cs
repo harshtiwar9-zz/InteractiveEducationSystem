@@ -29,5 +29,23 @@ namespace InteractiveEducationSystem.FrontEnd.Professor.Quiz {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource QuizQuestionsSource;
+        
+        /// <summary>
+        /// AddQuestions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView AddQuestions;
+        
+        /// <summary>
+        /// getQuizid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource getQuizid;
     }
 }
