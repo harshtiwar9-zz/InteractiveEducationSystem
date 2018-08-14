@@ -6,16 +6,16 @@
 <head runat="server">
     <title></title>
 
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -25,16 +25,19 @@
 
     <form id="form1" runat="server">
 
-        <!--Header-->        
- 
+        <!--Header-->
+
         <div class="row">
 
             <div class="navbar-fixed">
                 <nav>
                     <div class="nav-wrapper">
                         <a href="#!" class="brand-logo center hide-on-med-and-down">Interactive Education System</a>
-                       <div runat="server" id="LoginDetails" class="right"> Welcome <asp:Label ID="UserPageName" runat="server" Text=""></asp:Label>
-                        <asp:Button ID="LogOut" runat="server" Text="Logout" /></div>
+                        <div runat="server" id="LoginDetails" class="right">
+                            Welcome
+                            <asp:Label ID="UserPageName" runat="server" Text=""></asp:Label>
+                            <asp:Button ID="LogOut" runat="server" Text="Logout" class="waves-effect waves-light btn-small" OnClick="LogOut_Click" />
+                        </div>
                         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                             <i class="material-icons">menu
                             </i>
@@ -51,17 +54,17 @@
                 <li><a href="#!">Home</a></li>
                 <li><a href="#!">Courses</a></li>
                 <li><a href="#!">Tech Support</a></li>
-                <li><a href="~/FrontEnd/Professor/QuizSetings.aspx"> Manage Quiz </a></li>
+                <li><a href="~/FrontEnd/Professor/QuizSetings.aspx">Manage Quiz </a></li>
             </ul>
 
         </div>
-        
-        
+
+
 
         <div class="row">
 
             <!--Side Nav Fixed-->
-            
+
             <blockquote class="col l2 center card-title">
                 <ul>
                     <li><a href="#!">Home</a></li>
@@ -71,19 +74,18 @@
                     <li><a href="#!">Tech Support</a></li>
                 </ul>
             </blockquote>
-            
+
             <blockquote class="col l10">
                 <!--Body-->
 
                 <div>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
                     </asp:ContentPlaceHolder>
                 </div>
             </blockquote>
 
         </div>
-        
+
         <div class="row">
 
             <!--Footer-->
@@ -94,7 +96,7 @@
                             <h5 class="white-text">Developed By: Centennial College Students - Team1</h5>
                             <p class="grey-text text-lighten-4">Follow Us : InteractiveEducationSystem/Facebook</p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="footer-copyright">
@@ -104,23 +106,23 @@
                 </div>
             </footer>
 
-        </div>        
+        </div>
 
     </form>
 
-    
+
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
 </body>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-            $('.dropdown-trigger').dropdown();
-            $('select').formSelect();
-          });
-    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+        $('.dropdown-trigger').dropdown();
+        $('select').formSelect();
+    });
+</script>
 
 </html>

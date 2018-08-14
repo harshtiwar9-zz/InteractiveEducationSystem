@@ -27,5 +27,13 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
                 UserTypeSession = (string)(Session["username"]);
             }
         }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            Session["role"] = null;
+            Session["PageName"] = null;
+            Server.Transfer("~/Login.aspx");
+        }
     }
 }

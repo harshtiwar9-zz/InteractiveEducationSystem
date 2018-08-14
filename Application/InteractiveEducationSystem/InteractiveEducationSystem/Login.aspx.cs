@@ -32,7 +32,6 @@ namespace InteractiveEducationSystem
         {
             userName = Loginbox.Text;
             password = Passwordbox.Text;
-            demol.Text = userName;
             result = UserLogin(userName, password);
 
             Page_re(result);
