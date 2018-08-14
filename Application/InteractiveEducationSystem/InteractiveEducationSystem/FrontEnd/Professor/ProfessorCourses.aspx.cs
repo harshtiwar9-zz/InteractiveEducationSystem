@@ -26,17 +26,14 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 
             if (!this.IsPostBack) // to avoid reloading your control on postback
             {
-
                 noDatalbl.Visible = false;
                 datafound.Visible = false;
                 answersList.Visible = false;
             }
-           
-            
-
+        
         }
-
-        protected void stu_answer_Click(object sender, EventArgs e)
+       
+        protected void Stu_answer_Click(object sender, EventArgs e)
         {
             
                 answersList.Visible = true;

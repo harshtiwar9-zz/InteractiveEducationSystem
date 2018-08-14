@@ -7,19 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem {
+namespace InteractiveEducationSystem.FrontEnd.Course_Coordinator {
     
     
-    public partial class RegRole {
+    public partial class CourseCoordinator {
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// CourseList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList CourseList;
+        
+        /// <summary>
+        /// Btnsubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btnsubmit;
         
         /// <summary>
         /// GridView1 control.

@@ -7,90 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InteractiveEducationSystem.FrontEnd {
+namespace InteractiveEducationSystem.FrontEnd.Professor {
     
     
-    public partial class StudentHome {
+    public partial class QuizSetings {
         
         /// <summary>
-        /// BtnTakeQuiz control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnTakeQuiz;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
-        /// quizDiv control.
+        /// quizTime_tb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl quizDiv;
+        protected global::System.Web.UI.WebControls.TextBox quizTime_tb;
         
         /// <summary>
-        /// lblInstruction control.
+        /// requiredtime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInstruction;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredtime;
         
         /// <summary>
-        /// lblQuestion control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuestion;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtResponse control.
+        /// quizAttempts_tb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResponse;
+        protected global::System.Web.UI.WebControls.TextBox quizAttempts_tb;
         
         /// <summary>
-        /// btnNext control.
+        /// requiredattempt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNext;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredattempt;
         
         /// <summary>
-        /// btnSave control.
+        /// applyChange_button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-        
-        /// <summary>
-        /// lblSuccess control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSuccess;
-        
-        /// <summary>
-        /// demolabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label demolabel;
+        protected global::System.Web.UI.WebControls.Button applyChange_button;
     }
 }

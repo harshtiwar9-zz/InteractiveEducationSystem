@@ -10,7 +10,7 @@
 namespace InteractiveEducationSystem {
     
     
-    public partial class RegRole {
+    public partial class RegProfRole {
         
         /// <summary>
         /// SqlDataSource1 control.

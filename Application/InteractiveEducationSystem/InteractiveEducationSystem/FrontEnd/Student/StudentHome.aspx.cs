@@ -18,13 +18,15 @@ namespace InteractiveEducationSystem.FrontEnd
         SqlCommand comm;
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
-        string connectionString =
-        ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
+        string connectionString = ConfigurationManager.ConnectionStrings["IES"].ConnectionString;
         DataSet questionList = new DataSet();
         String StudentResponse;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string username = (string)Session["username"];
+           
             btnSave.Visible = false;
             int studentID = Convert.ToInt32(username);
             BtnTakeQuiz.Enabled = false;
@@ -52,7 +54,7 @@ namespace InteractiveEducationSystem.FrontEnd
                 int studentLogin = 7;
                 for (int i = 0; i < studentList.Count; i++)
                 {
-                    if (studentID.Equals())
+                    if (true)
                     {
 
                         BtnTakeQuiz.Enabled = true;

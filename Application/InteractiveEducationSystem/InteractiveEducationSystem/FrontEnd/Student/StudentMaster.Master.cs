@@ -9,9 +9,21 @@ namespace InteractiveEducationSystem.FrontEnd
 {
     public partial class StudentMaster : System.Web.UI.MasterPage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        string pagename;
+        string UserTypeSession; 
+    protected void Page_Load(object sender, EventArgs e)
         {
-
+            pagename = (string)Session["PageName"];
+            if (pagename != null)
+            {
+                UserPageName.Text = pagename;
+            }
+            else
+            {
+                LoginDetails.Visible = false;
+            }
+            if (!IsPostBack)
+            { UserTypeSession = (string)(Session["username"]); }
         }
     }
 }
