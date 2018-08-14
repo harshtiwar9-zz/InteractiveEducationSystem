@@ -67,12 +67,48 @@ namespace InteractiveEducationSystem.FrontEnd.Professor {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl initiateQuizMSG;
         
         /// <summary>
-        /// SqlDataSource2 control.
+        /// readerPrint control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl readerPrint;
+        
+        /// <summary>
+        /// dataList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dataList;
+        
+        /// <summary>
+        /// studentIDdata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource studentIDdata;
+        
+        /// <summary>
+        /// studentIDdata2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource studentIDdata2;
+        
+        /// <summary>
+        /// quizQuestionID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource quizQuestionID;
     }
 }

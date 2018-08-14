@@ -87,6 +87,14 @@
 
                                 </div>
                                 
+                                <div class="teal-text" id="readerPrint" runat="server">
+
+                                </div>
+
+                                <div class="teal-text" id="dataList" runat="server">
+
+                                </div>
+
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -98,6 +106,18 @@
         </div>
     </div>
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="studentIDdata" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" SelectCommand="SELECT [ID_FK] FROM [Student]"></asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="studentIDdata2" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" SelectCommand="SELECT ID_FK FROM Student WHERE ID_FK NOT IN(SELECT Student_id_FK FROM Student_quiz WHERE (Quiz_id_FK &lt;&gt; @QuizId))">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="initiatequizselection" Name="QuizId" PropertyName="SelectedValue" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="quizQuestionID" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" SelectCommand="SELECT [Quiz_question_id] FROM [Quiz_question] WHERE ([Quiz_id] = @Quiz_id)">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="initiatequizselection" Name="Quiz_id" PropertyName="SelectedValue" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 
 </asp:Content>

@@ -7,6 +7,7 @@
         <h1>Edit Quiz Questions</h1>
     </div>
     <div class="row">
+
         <div class="col l5 s12 m12 offset-l3">
             <asp:GridView ID="quizQuestions" runat="server" AutoGenerateColumns="False" DataKeyNames="Quiz_question_id" DataSourceID="QuizQuestionsSource">
                 <Columns>
@@ -23,6 +24,20 @@
                     </UpdateParameters>
             </asp:SqlDataSource>
         </div>
+        
+        <div class="col l3 s12 m12 offset-l9 hide-on-small-only">
+            <ul class="section table-of-contents">
+                <li>
+                    <asp:GridView ID="AddQuestions" runat="server" AutoGenerateColumns="False" DataKeyNames="Quiz_id_PK" DataSourceID="getQuizid">
+                        <Columns>
+                            <asp:HyperLinkField DataNavigateUrlFields="Quiz_id_PK" DataNavigateUrlFormatString="~/FrontEnd/Professor/Quiz/AddQuizQuestions.aspx?quiz={0}" Text="Add Questions" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="getQuizid" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" SelectCommand="SELECT TOP 1 * FROM Quiz ORDER BY Quiz_id_pk DESC"></asp:SqlDataSource>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
 </asp:Content>

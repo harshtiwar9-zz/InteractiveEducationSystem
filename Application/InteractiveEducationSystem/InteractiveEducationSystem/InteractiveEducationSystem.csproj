@@ -69,6 +69,7 @@
     <Content Include="AssignRole.aspx" />
     <Content Include="FrontEnd\Administrator\CoordinatorData.aspx" />
     <Content Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx" />
+    <Content Include="FrontEnd\Professor\ProfessorProfile.aspx" />
     <Content Include="FrontEnd\Professor\QuizSetings.aspx" />
     <Content Include="FrontEnd\Student\StudentProfile.aspx" />
     <Content Include="MonitorUser.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx.designer.cs">
       <DependentUpon>CourseCoordinator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorProfile.aspx.cs">
+      <DependentUpon>ProfessorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Professor\ProfessorProfile.aspx.designer.cs">
+      <DependentUpon>ProfessorProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Professor\QuizSetings.aspx.cs">
       <DependentUpon>QuizSetings.aspx</DependentUpon>

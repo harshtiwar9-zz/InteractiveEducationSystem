@@ -72,7 +72,7 @@
             
             <blockquote class="col l2 center card-title hide-on-med-and-down">
                 <ul>
-                    <li><a href="../../Home.aspx">Home</a></li>
+                    <li><a href="ProfessorHome.aspx">Home</a></li>
                     <li class="divider"></li>
                     <li><a href="/FrontEnd/Professor/ProfessorCourses.aspx">Courses</a></li>
                     <li class="divider"></li>
