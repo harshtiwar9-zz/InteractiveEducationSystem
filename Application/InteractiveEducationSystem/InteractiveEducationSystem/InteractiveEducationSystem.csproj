@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="AssignRole.aspx" />
     <Content Include="FrontEnd\Administrator\CoordinatorData.aspx" />
+    <Content Include="FrontEnd\Student\StudentHistory.aspx" />
     <Content Include="IConflict.aspx" />
     <Content Include="FrontEnd\Course-Coordinator\CourseCoordinator.aspx" />
     <Content Include="FrontEnd\Professor\ProfessorProfile.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="FrontEnd\Administrator\CoordinatorData.aspx.designer.cs">
       <DependentUpon>CoordinatorData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Student\StudentHistory.aspx.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Student\StudentHistory.aspx.designer.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="IConflict.aspx.cs">
       <DependentUpon>IConflict.aspx</DependentUpon>
