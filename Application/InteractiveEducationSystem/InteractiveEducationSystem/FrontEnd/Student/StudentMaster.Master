@@ -51,7 +51,8 @@
                 </li>
                 <li><a href="../../Home.aspx</a>">Home</a></li>
                 <li><a href="../Professor/ProfessorCourses.aspx">Courses</a></li>
-                <li><a href="#!">Tech Support</a></li>
+                <li>   <a href="/FrontEnd/Student/StudentHistory.aspx">Quiz History</a></li>
+            
             </ul>
 
         </div>
@@ -66,7 +67,7 @@
                 <ul>
                     <li><a href="/FrontEnd/Student/StudentHome.aspx">Home</a></li>
                     <li class="divider"></li>
-                    <li><a href="#!">Tech Support</a></li>
+                    <li>   <a href="/FrontEnd/Student/StudentHistory.aspx">Quiz History</a></li>
                     <li class="divider"></li>
                     <li><a href="/FrontEnd/Student/StudentProfile.aspx">Edit profile</a></li>
                 </ul>

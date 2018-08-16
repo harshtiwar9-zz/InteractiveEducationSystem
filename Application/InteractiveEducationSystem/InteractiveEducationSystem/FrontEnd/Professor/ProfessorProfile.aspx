@@ -22,7 +22,7 @@
              </Columns>
          </asp:GridView>
 
-         <asp:SqlDataSource ID="ProfProfile" runat="server" ConnectionString="Data Source=Harsh-HP;Initial Catalog=IES;Integrated Security=True" DeleteCommand="DELETE FROM [Professor] WHERE [Prof_Id] = @Prof_Id" InsertCommand="INSERT INTO [Professor] ([First_name], [Last_name], [Gender], [ID_FK]) VALUES (@First_name, @Last_name, @Gender, @ID_FK)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Prof_Id], [First_name], [Last_name], [Gender], [ID_FK] FROM [Professor] WHERE ([ID_FK] = @ID_FK)" UpdateCommand="UPDATE [Professor] SET [First_name] = @First_name, [Last_name] = @Last_name, [Gender] = @Gender WHERE [Prof_Id] = @Prof_Id">
+         <asp:SqlDataSource ID="ProfProfile" runat="server" ConnectionString="<%$ ConnectionStrings:IES %>" DeleteCommand="DELETE FROM [Professor] WHERE [Prof_Id] = @Prof_Id" InsertCommand="INSERT INTO [Professor] ([First_name], [Last_name], [Gender], [ID_FK]) VALUES (@First_name, @Last_name, @Gender, @ID_FK)" SelectCommand="SELECT [Prof_Id], [First_name], [Last_name], [Gender], [ID_FK] FROM [Professor] WHERE ([ID_FK] = @ID_FK)" UpdateCommand="UPDATE [Professor] SET [First_name] = @First_name, [Last_name] = @Last_name, [Gender] = @Gender WHERE [Prof_Id] = @Prof_Id">
              <DeleteParameters>
                  <asp:Parameter Name="Prof_Id" Type="Int32" />
              </DeleteParameters>

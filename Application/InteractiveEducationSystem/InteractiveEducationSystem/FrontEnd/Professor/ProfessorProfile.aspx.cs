@@ -20,7 +20,7 @@ namespace InteractiveEducationSystem.FrontEnd.Professor
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserId = (string)(Session["username"]);
+           UserId = (string)(Session["username"]);
 
             
 
